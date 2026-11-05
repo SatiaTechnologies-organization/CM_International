@@ -53,15 +53,16 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Reduced from 20px to fit more items */
 }
 
 nav a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px; /* Reduced from 14px to fit more items */
     transition: color 0.3s;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
 }
 
 nav a.active, nav a:hover {
@@ -69,7 +70,6 @@ nav a.active, nav a:hover {
     border-bottom: 2px solid var(--secondary-green);
     padding-bottom: 5px;
 }
-
 .lang-switch button {
     background: none;
     border: 1px solid #ccc;
