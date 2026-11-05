@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
     padding: 0 20px;
 }
 
-/* --- HEADER --- */
+/* --- HEADER & NAVIGATION --- */
 header {
     background: white;
     padding: 15px 0;
@@ -47,22 +47,23 @@ header {
 }
 
 .logo img {
-    height: 60px; /* Adjust based on your logo */
+    height: 60px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* Reduced from 20px to fit more items */
+    gap: 15px; /* Adjusted to fit 8 items */
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 13px; /* Reduced from 14px to fit more items */
+    font-size: 13px; /* Slightly smaller to fit new menu */
     transition: color 0.3s;
-    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    white-space: nowrap;
 }
 
 nav a.active, nav a:hover {
@@ -70,6 +71,7 @@ nav a.active, nav a:hover {
     border-bottom: 2px solid var(--secondary-green);
     padding-bottom: 5px;
 }
+
 .lang-switch button {
     background: none;
     border: 1px solid #ccc;
@@ -79,6 +81,7 @@ nav a.active, nav a:hover {
     font-size: 12px;
     margin-left: 5px;
     color: #777;
+    transition: all 0.3s;
 }
 
 .lang-switch button.active {
@@ -174,7 +177,7 @@ nav a.active, nav a:hover {
 
 .pillar-card {
     background: white;
-    padding: 40px 30px 0 30px; /* no bottom padding for stats box */
+    padding: 40px 30px 0 30px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
@@ -211,7 +214,7 @@ nav a.active, nav a:hover {
 .stat-box {
     background: var(--light-green-bg);
     padding: 20px;
-    margin: 0 -30px; /* Stretch to edges */
+    margin: 0 -30px;
     display: flex;
     flex-direction: column;
 }
@@ -354,7 +357,7 @@ footer h4 {
 }
 
 .footer-bottom {
-    background-color: #22533e; /* Darker green */
+    background-color: #22533e;
     padding: 20px 0;
     text-align: center;
     font-size: 12px;
@@ -362,6 +365,15 @@ footer h4 {
 }
 
 /* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 992px) {
     .hero-container {
         flex-direction: column;
@@ -386,6 +398,10 @@ footer h4 {
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
+    }
+    nav a {
+        font-size: 14px;
     }
     .hero-content h1 {
         font-size: 28px;
@@ -396,7 +412,4 @@ footer h4 {
     .story-content {
         padding: 30px 20px;
     }
-}
-.lang-switch button {
-    cursor: pointer;
 }
