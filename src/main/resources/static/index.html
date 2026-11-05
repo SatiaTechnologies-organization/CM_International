@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de"> <!-- Default language set to German -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMI - Christian Mission International</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER / NAVIGATION -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="CMI Logo" onerror="this.src='https://via.placeholder.com/150x50?text=CMI+Logo'">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-key="nav_home">Startseite</a></li>
+                <li><a href="#" data-key="nav_about">Über uns</a></li>
+                <li><a href="#" data-key="nav_edu">Bildung</a></li>
+                <li><a href="#" data-key="nav_hosp">CMI Krankenhaus</a></li>
+                <li><a href="#" data-key="nav_sponsor">Kind sponsern</a></li>
+                <li><a href="#" data-key="nav_donate">Spenden</a></li>
+                <li><a href="#" data-key="nav_contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <!-- Added onclick events to switch languages -->
+            <button id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button id="btn-de" class="active" onclick="setLanguage('de')">DE</button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 data-key="hero_title">Kindern Bildung ermöglichen. Gemeinschaften heilen. Christus teilen.</h1>
+            <p data-key="hero_desc">Eine deutsch finanzierte Mission in Kenia, die weniger privilegierten Kindern vom Grundschul- bis zum Universitätsabschluss hilft und die Gemeinde durch das neu gebaute CMI-Krankenhaus unterstützt.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-green" data-key="btn_sponsor">Kind sponsern</a>
+                <a href="#" class="btn btn-gold" data-key="btn_donate">Für die Mission spenden</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero.jpg" alt="Happy School Children" onerror="this.src='https://via.placeholder.com/800x600?text=Hero+Image'">
+        </div>
+    </div>
+</section>
+
+<!-- THREE PILLARS SECTION -->
+<section class="pillars-section">
+    <div class="container">
+        <h2 class="section-title" data-key="pillars_title">Unsere drei Säulen</h2>
+
+        <div class="pillars-grid">
+            <!-- Pillar 1 -->
+            <div class="pillar-card">
+                <div class="icon-circle"><i class="fa-solid fa-book-open"></i></div>
+                <h3 data-key="p1_title">Bildung auf höchstem Niveau</h3>
+                <p data-key="p1_desc">Bereitstellung von Bildungsstipendien von der Grundschule bis zur Universität, Schulmaterial, Mentoring und Lernunterstützung für benachteiligte Kinder.</p>
+                <div class="stat-box">
+                    <span class="stat-number" data-key="p1_stat_num">120+</span>
+                    <span class="stat-label" data-key="p1_stat_lbl">Kinder gesponsert</span>
+                </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-card">
+                <div class="icon-circle"><i class="fa-solid fa-briefcase-medical"></i></div>
+                <h3 data-key="p2_title">CMI Krankenhaus</h3>
+                <p data-key="p2_desc">Bereitstellung einer mitfühlenden Gesundheitsversorgung für die lokale Gemeinde durch unsere neu gebaute Klinik und das Krankenhaus, mit medizinischer Versorgung, Mutterschaftsgesundheit und Outreach.</p>
+                <div class="stat-box">
+                    <span class="stat-number" data-key="p2_stat_num">15</span>
+                    <span class="stat-label" data-key="p2_stat_lbl">Studenten an der Universität</span>
+                </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-card">
+                <div class="icon-circle"><i class="fa-solid fa-hands-praying"></i></div>
+                <h3 data-key="p3_title">Glaube in Aktion</h3>
+                <p data-key="p3_desc">Teilen der Liebe Christi durch Gemeinde-Outreach, Jüngerschaftsprogramme und Dienst mit Würde, Hoffnung und Mitgefühl.</p>
+                <div class="stat-box">
+                    <span class="stat-number" data-key="p3_stat_num">1</span>
+                    <span class="stat-label" data-key="p3_stat_lbl">Krankenhaus gebaut</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SUCCESS STORY SECTION -->
+<section class="success-story-section">
+    <div class="container">
+        <div class="story-card">
+            <div class="story-image">
+                <img src="images/hospital.jpg" alt="CMI Hospital Building" onerror="this.src='https://via.placeholder.com/400x300?text=Hospital'">
+            </div>
+            <div class="story-content">
+                <span class="story-label" data-key="story_label">ERFOLGSGESCHICHTE</span>
+                <h3 data-key="story_title">Treffen Sie Aisha — Vom gesponserten Schüler zur Universitätsstudentin</h3>
+                <p class="quote" data-key="story_quote">"Dank der Unterstützung von CMI kann ich jetzt Umweltwissenschaften an der Universität studieren. Die Unterstützung gab mir Hoffnung, Schulgebühren und Mentoring. Ich träume davon, eines Tages meiner Gemeinde etwas zurückzugeben."</p>
+                <div class="author-info">
+                    <img src="images/aisha.jpg" alt="Aisha" onerror="this.src='https://via.placeholder.com/50?text=A'">
+                    <p data-key="story_author">— Aisha, 20, jetzt im 2. Jahr an der Universität von Nairobi</p>
+                </div>
+                <a href="#" class="read-more" data-key="story_link">Lesen Sie mehr Schülererfolge &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col brand-col">
+            <img src="images/logo.png" alt="CMI Logo" class="footer-logo" onerror="this.src='https://via.placeholder.com/120x40?text=CMI'">
+            <p data-key="footer_about">Deutsch finanzierte Mission in Kenia, die Bildung, Gesundheitsversorgung und Hoffnung durch Christus bringt.</p>
+        </div>
+        <div class="footer-col">
+            <h4 data-key="footer_k_contact">Kontakt — Kenia</h4>
+            <ul class="contact-list">
+                <li data-key="footer_k_addr">CMI Centre, Kitale, Kenia</li>
+                <li>P.O. Box 2101, Kitale 30200</li>
+                <li>Email: kenya@cmi-online.info</li>
+                <li>Phone: +254 712 345 678</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 data-key="footer_g_contact">Kontakt — Deutschland</h4>
+            <ul class="contact-list">
+                <li data-key="footer_g_addr">CMI Deutschland e.V., Berlin, Deutschland</li>
+                <li>Email: info@cmi-online.info</li>
+                <li>Phone: +49 30 1234 5678</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p data-key="footer_copy">&copy; 2024 Christian Mission International &middot; cmi-onlee.info &middot; Eingetragene NGO in Kenia & Deutschland &middot; Datenschutz &middot; Impressum</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Link to the translation script -->
+<script src="js/script.js"></script>
+</body>
+</html>
