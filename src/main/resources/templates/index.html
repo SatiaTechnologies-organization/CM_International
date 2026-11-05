@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christian Mission International — educating children, healing communities and sharing Christ in Kenya.">
+    <title>CMI | Christian Mission International</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/cmi.css}" href="/css/cmi.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" th:href="@{/static}" href="/static" aria-label="CMI home">
+        <span class="brand-mark"><span>✝</span></span>
+        <span class="brand-copy"><strong>CMI</strong><small>Christian Mission International</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+        <a class="active" href="#home" data-en="Home" data-de="Startseite">Home</a>
+        <a href="#about" data-en="About Us" data-de="Über uns">About Us</a>
+        <a href="#education" data-en="Education" data-de="Bildung">Education</a>
+        <a href="#hospital" data-en="CMI Hospital" data-de="CMI Krankenhaus">CMI Hospital</a>
+        <a href="#sponsor" data-en="Sponsor a Child" data-de="Ein Kind fördern">Sponsor a Child</a>
+        <a href="#donate" data-en="Donate" data-de="Spenden">Donate</a>
+        <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+        <div class="language-switch" aria-label="Choose language">
+            <button class="lang active" type="button" data-lang="en">EN</button>
+            <button class="lang" type="button" data-lang="de">DE</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-photo" role="img" aria-label="School children smiling together"></div>
+        <div class="hero-card">
+            <p class="eyebrow" data-en="A brighter future for every child" data-de="Eine bessere Zukunft für jedes Kind">A brighter future for every child</p>
+            <h1 data-en="Educating Children. Healing Communities. Sharing Christ."
+                data-de="Kinder bilden. Gemeinschaften heilen. Christus teilen.">
+                Educating Children. Healing Communities. Sharing Christ.
+            </h1>
+            <p class="hero-intro"
+               data-en="A German-funded mission in Kenya supporting children from primary school to university, while serving the community through the CMI Hospital."
+               data-de="Eine von Deutschland unterstützte Mission in Kenia, die Kinder von der Grundschule bis zur Universität fördert und der Gemeinschaft durch das CMI-Krankenhaus dient.">
+                A German-funded mission in Kenya supporting children from primary school to university,
+                while serving the community through the CMI Hospital.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-green" href="#sponsor" data-en="Sponsor a Child" data-de="Ein Kind fördern">Sponsor a Child</a>
+                <a class="btn btn-gold" href="#donate" data-en="Donate to the Mission" data-de="Für die Mission spenden">Donate to the Mission</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section" id="about">
+        <div class="pillars-area">
+            <h2 data-en="Our Three Pillars" data-de="Unsere drei Säulen">Our Three Pillars</h2>
+            <div class="pillar-grid">
+                <article class="pillar-card" id="education">
+                    <div class="pillar-icon">▤</div>
+                    <h3 data-en="Education to the Highest Level" data-de="Bildung bis zum höchsten Niveau">Education to the Highest Level</h3>
+                    <p data-en="Providing quality education sponsorship, school supplies, mentorship and learning support for vulnerable children."
+                       data-de="Wir bieten Bildungsförderung, Schulmaterial, Mentoring und Lernunterstützung für benachteiligte Kinder.">
+                        Providing quality education sponsorship, school supplies, mentorship and learning support for vulnerable children.
+                    </p>
+                    <div class="pillar-stat"><strong>120+</strong><span data-en="Children Sponsored" data-de="Geförderte Kinder">Children Sponsored</span></div>
+                </article>
+
+                <article class="pillar-card" id="hospital">
+                    <div class="pillar-icon medical">✚</div>
+                    <h3 data-en="CMI Hospital" data-de="CMI Krankenhaus">CMI Hospital</h3>
+                    <p data-en="Delivering compassionate healthcare through medical care, maternal health and community outreach."
+                       data-de="Mitfühlende Gesundheitsversorgung, Geburtshilfe und Angebote für die Gemeinschaft.">
+                        Delivering compassionate healthcare through medical care, maternal health and community outreach.
+                    </p>
+                    <div class="pillar-stat"><strong>15</strong><span data-en="Students in University" data-de="Studierende an Universitäten">Students in University</span></div>
+                </article>
+
+                <article class="pillar-card">
+                    <div class="pillar-icon faith">♧</div>
+                    <h3 data-en="Faith in Action" data-de="Glaube in Aktion">Faith in Action</h3>
+                    <p data-en="Sharing Christ’s love through community outreach, discipleship and serving with dignity, hope and compassion."
+                       data-de="Wir teilen Christi Liebe durch Gemeindearbeit und dienen mit Würde, Hoffnung und Mitgefühl.">
+                        Sharing Christ’s love through community outreach, discipleship and serving with dignity, hope and compassion.
+                    </p>
+                    <div class="pillar-stat"><strong>1</strong><span data-en="Hospital Built" data-de="Gebautes Krankenhaus">Hospital Built</span></div>
+                </article>
+            </div>
+        </div>
+
+        <article class="story-card">
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=85"
+                 onerror="this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=85'"
+                 alt="Community healthcare facility">
+            <div class="story-content">
+                <span class="story-label" data-en="Success story" data-de="Erfolgsgeschichte">Success story</span>
+                <h2 data-en="Meet Aisha — From Sponsored Pupil to University Student"
+                    data-de="Lernen Sie Aisha kennen — vom geförderten Schulkind zur Studentin">
+                    Meet Aisha — From Sponsored Pupil to University Student
+                </h2>
+                <div class="student-quote">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=160&q=80" alt="Portrait of a student">
+                    <p data-en="“Because of CMI’s sponsorship, I can now study Environmental Science at university. The support gave me hope, school fees and mentorship.”"
+                       data-de="„Dank der Förderung durch CMI kann ich jetzt Umweltwissenschaften studieren. Die Unterstützung gab mir Hoffnung, Schulgebühren und Mentoring.“">
+                        “Because of CMI’s sponsorship, I can now study Environmental Science at university. The support gave me hope, school fees and mentorship.”
+                    </p>
+                </div>
+                <p class="attribution">— Aisha, 20, University student</p>
+                <a class="story-link" href="#stories" data-en="Read more student stories →" data-de="Weitere Erfolgsgeschichten →">Read more student stories →</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="callout-strip" id="sponsor">
+        <div>
+            <span class="eyebrow" data-en="Be part of the change" data-de="Seien Sie Teil der Veränderung">Be part of the change</span>
+            <h2 data-en="Your support can change a life." data-de="Ihre Unterstützung kann Leben verändern.">Your support can change a life.</h2>
+            <p data-en="Help a child stay in school, support quality healthcare or strengthen our community programmes."
+               data-de="Helfen Sie Kindern, die Schule zu besuchen, unterstützen Sie die Gesundheitsversorgung oder unsere Gemeinschaftsprogramme.">
+                Help a child stay in school, support quality healthcare or strengthen our community programmes.
+            </p>
+        </div>
+        <div class="callout-actions">
+            <a class="btn btn-green" href="mailto:kenya@cmi-online.info" data-en="Sponsor a Child" data-de="Ein Kind fördern">Sponsor a Child</a>
+            <a class="btn btn-gold" id="donate" href="mailto:kenya@cmi-online.info?subject=Donation" data-en="Make a Donation" data-de="Jetzt spenden">Make a Donation</a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer" id="contact">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a class="brand brand-light" href="#home">
+                <span class="brand-mark"><span>✝</span></span>
+                <span class="brand-copy"><strong>CMI</strong><small>Christian Mission International</small></span>
+            </a>
+            <p data-en="A German-funded mission in Kenya, bringing education, healthcare and hope through Christ."
+               data-de="Eine von Deutschland unterstützte Mission in Kenia, die durch Christus Bildung, Gesundheitsversorgung und Hoffnung bringt.">
+                A German-funded mission in Kenya, bringing education, healthcare and hope through Christ.
+            </p>
+        </div>
+        <div>
+            <h3>Contact — Kenya</h3>
+            <p>CMI Centre, Kitale, Kenya<br>P.O. Box 2101, Kitale 30200<br>
+                Email: <a href="mailto:kenya@cmi-online.info">kenya@cmi-online.info</a><br>
+                Phone: <a href="tel:+254712345678">+254 712 345 678</a></p>
+        </div>
+        <div>
+            <h3>Contact — Germany</h3>
+            <p>CMI Deutschland e.V., Berlin, Germany<br>
+                Email: <a href="mailto:info@cmi-online.info">info@cmi-online.info</a><br>
+                Phone: <a href="tel:+493012345678">+49 30 1234 5678</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2024 Christian Mission International <span>•</span> cmi-online.info <span>•</span> Registered NGO in Kenya &amp; Germany <span>•</span> Privacy <span>•</span> Imprint</div>
+</footer>
+<script th:src="@{/js/cmi.js}" src="/js/cmi.js"></script>
+</body>
+</html>
