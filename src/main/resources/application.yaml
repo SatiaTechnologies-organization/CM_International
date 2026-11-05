@@ -1,3 +1,6 @@
 spring:
   application:
     name: CM International
+
+server:
+  port: 8082
