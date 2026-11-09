@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${post.titleEn} + ' | CMI'">Blog Post | CMI</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/cmi.css}">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+<main class="single-post-wrapper">
+    <article class="single-post-container">
+
+        <header class="post-header">
+            <div class="blog-meta" style="justify-content: flex-start; gap: 15px; margin-bottom: 10px;">
+                <span class="category" th:attr="data-en=${post.categoryEn}, data-de=${post.categoryDe}" th:text="${post.categoryEn}">CATEGORY</span>
+                <span class="date" th:text="${#temporals.format(post.dateCreated, 'MMMM dd, yyyy')}">DATE</span>
+            </div>
+            <h1 class="post-title" th:attr="data-en=${post.titleEn}, data-de=${post.titleDe}" th:text="${post.titleEn}">Title</h1>
+        </header>
+
+        <div class="post-content">
+            <p th:attr="data-en=${post.contentEn}, data-de=${post.contentDe}" th:text="${post.contentEn}">Content goes here...</p>
+        </div>
+
+        <!-- DYNAMIC IMAGES & VIDEOS LOOP -->
+        <div class="post-images-list" th:each="img : ${post.images}">
+
+            <div class="post-video-container" th:if="${img.videoUrl != null && !img.videoUrl.isEmpty()}">
+                <!-- Fixed: Removed frameborder="0", used style="border: none;" -->
+                <iframe th:src="${img.videoUrl}" allowfullscreen style="border: none;"></iframe>
+            </div>
+
+            <div class="post-inline-image" th:if="${img.videoUrl == null || img.videoUrl.isEmpty()}">
+                <img th:src="${img.imageUrl}" alt="Blog Image" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80'">
+            </div>
+
+            <p class="image-description" th:if="${img.descriptionEn != null && !img.descriptionEn.isEmpty()}"
+               th:attr="data-en=${img.descriptionEn}, data-de=${img.descriptionDe}"
+               th:text="${img.descriptionEn}">
+                Image description here.
+            </p>
+        </div>
+
+        <!-- Article Footer / Meta (Views & Likes) -->
+        <div class="post-footer" style="border-top: 1px solid #eee; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; color: #888; font-size: 14px;">
+            <span><i class="fa-regular fa-eye"></i> <span th:text="${post.views}">0</span> Views</span>
+
+            <!-- Fixed: Removed the comma after onclick and used th:onclick for better Thymeleaf parsing -->
+            <button id="like-btn" th:onclick="'likePost(' + ${post.id} + ')'" style="background: none; border: none; padding: 0; color: #e74c3c; cursor: pointer; font-weight: bold; font-size: 14px; display: flex; align-items: center; gap: 5px; transition: transform 0.1s;">
+                <i class="fa-regular fa-heart" id="like-icon"></i> <span id="like-count" th:text="${post.likes}">0</span>
+            </button>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <!-- Fixed: Replaced '←' with &larr; and 'ü' with &uuml; -->
+            <a th:href="@{/blog}" style="font-weight: 700; color: var(--primary-dark); text-decoration: none;"
+               data-en="&larr; Back to all articles" data-de="&larr; Zur&uuml;ck zu allen Artikeln">
+                &larr; Zur&uuml;ck zu allen Artikeln
+            </a>
+        </div>
+
+    </article>
+</main>
+
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/js/cmi.js}"></script>
+
+<!-- Like Button Logic -->
+<script>
+    function likePost(id) {
+        const btn = document.getElementById('like-btn');
+        const icon = document.getElementById('like-icon');
+        const countSpan = document.getElementById('like-count');
+
+        // Prevent double-clicking
+        if (btn.disabled) return;
+        btn.disabled = true;
+
+        fetch('/blog/post/like/' + id)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(newCount => {
+                // Update the number
+                countSpan.innerText = newCount;
+
+                // Change icon from outline to solid
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid');
+
+                // Small bounce animation
+                btn.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    btn.style.transform = 'scale(1)';
+                }, 200);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Could not register like. Please ensure the server is running.');
+                btn.disabled = false; // Re-enable if it fails
+            });
+    }
+</script>
+
+</body>
+</html>

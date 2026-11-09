@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+
+<header th:fragment="admin-header" class="site-header" style="box-shadow: none; border-bottom: 2px solid #b99a4c;">
+    <div class="top-bar">
+        <div class="container header-top">
+            <a th:href="@{/}" href="/" class="brand-logo">
+                <img th:src="@{/images/logo.jpeg}" src="/images/logo.jpeg" alt="CMI Logo" class="logo-img">
+                <h1 class="brand-title">
+                    CHRISTIAN MISSION <span>INTERNATIONAL</span>
+                </h1>
+            </a>
+            <div class="language-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn active" data-lang="de">DE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-bar" style="background: #f8f9fa;">
+        <div class="container header-bottom" style="justify-content: center; gap: 40px;">
+            <a th:href="@{/admin/blog}" class="nav-link" style="font-size: 15px; font-weight: 700; color: #174d2e; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-newspaper"></i> Manage Blogs
+            </a>
+            <a th:href="@{/admin/news}" class="nav-link" style="font-size: 15px; font-weight: 700; color: #174d2e; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-bullhorn"></i> Manage News
+            </a>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>

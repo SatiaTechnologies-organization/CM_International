@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create News Post | Admin</title>
+    <link rel="stylesheet" th:href="@{/cmi.css}">
+</head>
+<body style="background: #f4f6f8; margin: 0;">
+
+<div th:replace="~{admin-header :: admin-header}"></div>
+
+<div class="admin-form-wrapper">
+    <h2>Create New News Post</h2>
+    <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+        Only fill in the English fields. The German translation will be generated automatically!
+    </p>
+
+    <form th:action="@{/admin/news/save}" th:object="${newsPost}" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>Date Text (e.g. "October 2026"):</label>
+            <input type="text" th:field="*{dateText}" required placeholder="October 2026">
+        </div>
+
+        <div class="form-group">
+            <label>Title (English):</label>
+            <input type="text" th:field="*{titleEn}" required placeholder="News from the missionaries">
+        </div>
+
+        <div class="form-group">
+            <label>Content (English):</label>
+            <textarea th:field="*{contentEn}" rows="5" required placeholder="Write the English content here..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Quote (English - Optional):</label>
+            <textarea th:field="*{quoteEn}" rows="2" placeholder="Peter looked at him..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Image:</label>
+            <input type="file" name="imageFile" accept="image/*" style="padding: 10px; background: #f9f9f9; border: 1px dashed #ccc; width: 100%;">
+            <input type="hidden" th:field="*{imageUrl}">
+        </div>
+
+        <div class="form-group">
+            <label>PDF Link (e.g., /pdf/new1.pdf):</label>
+            <input type="text" th:field="*{pdfUrl}" placeholder="/pdf/new1.pdf">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-admin">Publish & Translate</button>
+            <a th:href="@{/admin/news}" class="cancel-link">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+
+</body>
+</html>

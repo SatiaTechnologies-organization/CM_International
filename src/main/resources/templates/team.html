@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the team behind Christian Mission International in Germany and Kenya.">
+    <title>Our Team | CMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+<main class="team-page">
+    <div class="team-container">
+        <div class="team-section">
+            <div class="team-text">
+                <h2 data-en="Our team in Germany" data-de="Unser Team in Deutschland">Unser Team in Deutschland</h2>
+                <p data-en="The 'Christian Mission International e.V. - CMI' was founded in 1996 as a 'Christian Mission for the Unreached e.V. - CMU' in the form of an independent and registered association."
+                   data-de="Die 'Christian Mission International e.V. - CMI' wurde 1996 als 'Christliche Mission für die Ungerreichten e.V. - CMU' in Form eines unabhängigen und eingetragenen Vereins gegründet.">
+                    Die 'Christian Mission International e.V. - CMI' wurde 1996 als 'Christliche Mission für die Ungerreichten e.V. - CMU' in Form eines unabhängigen und eingetragenen Vereins gegründet.
+                </p>
+                <p data-en="In 2002, the CMU Förderstiftung was founded. In 2007, the 'CMU e.V.' and the 'CMU Förderstiftung' became for organizational reasons in 'CMI e.V. and CMI Förderstiftung' renamed."
+                   data-de="Im Jahr 2002 wurde die CMU Förderstiftung gegründet. Im Jahr 2007 wurden der 'CMU e.V.' und die 'CMU Förderstiftung' aus organisatorischen Gründen in 'CMI e.V. und CMI Förderstiftung' umbenannt.">
+                    Im Jahr 2002 wurde die CMU Förderstiftung gegründet. Im Jahr 2007 wurden der 'CMU e.V.' und die 'CMU Förderstiftung' aus organisatorischen Gründen in 'CMI e.V. und CMI Förderstiftung' umbenannt.
+                </p>
+                <p data-en="The seat of the association and the foundation is Schopfloch-Oberiflingen in Baden-Württemberg, Germany. The association is composed of 15 members, who are invariably volunteering. In this way, we can keep the administrative costs very low and use the donations on site. Our area of application is currently in Kenya on Mount Elgon."
+                   data-de="Der Sitz des Vereins und der Stiftung ist Schopfloch-Oberiflingen in Baden-Württemberg. Der Verein besteht aus 15 Mitgliedern, die ausnahmslos ehrenamtlich tätig sind. Auf diese Weise können wir die Verwaltungskosten sehr niedrig halten und die Spenden vor Ort einsetzen. Unser Einsatzgebiet liegt derzeit in Kenia am Mount Elgon.">
+                    Der Sitz des Vereins und der Stiftung ist Schopfloch-Oberiflingen in Baden-Württemberg. Der Verein besteht aus 15 Mitgliedern, die ausnahmslos ehrenamtlich tätig sind. Auf diese Weise können wir die Verwaltungskosten sehr niedrig halten und die Spenden vor Ort einsetzen. Unser Einsatzgebiet liegt derzeit in Kenia am Mount Elgon.
+                </p>
+            </div>
+            <div class="team-image">
+                <img th:src="@{/images/team-germany.jpg}" src="/images/team-germany.jpg" alt="CMI Team Germany">
+            </div>
+        </div>
+
+        <hr class="team-divider">
+        <div class="team-section reverse">
+            <div class="team-text">
+                <h2 data-en="Our team in Kenya" data-de="Unser Team in Kenia">Unser Team in Kenia</h2>
+                <h3 data-en="Management CMI Kenya" data-de="Leitung CMI Kenia">Leitung CMI Kenia</h3>
+                <p data-en="Sabine and Patrick Museve lead CMI Kenya and supervise the project at Mount Elgon."
+                   data-de="Sabine und Patrick Museve leiten CMI Kenia und betreuen das Projekt am Mount Elgon.">
+                    Sabine und Patrick Museve leiten CMI Kenia und betreuen das Projekt am Mount Elgon.
+                </p>
+                <p data-en="CMI Kenya works closely with the Africa Inland Church, the State Health Department and other Organizations together."
+                   data-de="CMI Kenia arbeitet eng mit der Africa Inland Church, dem staatlichen Gesundheitsamt und anderen Organisationen zusammen.">
+                    CMI Kenia arbeitet eng mit der Africa Inland Church, dem staatlichen Gesundheitsamt und anderen Organisationen zusammen.
+                </p>
+                <p data-en="Since September 2018 our 'CMI Sambocho Health Center' is Member of CHAK - Christian Health Association of Kenya, an umbrella organization of Christian health facilities in Kenya."
+                   data-de="Seit September 2018 ist unser 'CMI Sambocho Health Center' Mitglied von CHAK - Christian Health Association of Kenya, einem Dachverband christlicher Gesundheitseinrichtungen in Kenia.">
+                    Seit September 2018 ist unser 'CMI Sambocho Health Center' Mitglied von CHAK - Christian Health Association of Kenya, einem Dachverband christlicher Gesundheitseinrichtungen in Kenia.
+                </p>
+            </div>
+            <div class="team-image">
+                <img th:src="@{/images/team-kenya.jpg}" src="/images/team-kenya.jpg" alt="Family Museve - CMI Kenya Management" title="Family Museve">
+            </div>
+        </div>
+
+        <hr class="team-divider">
+        <div class="team-section">
+            <div class="team-text">
+                <h2 data-en="Our staff on site" data-de="Unsere Mitarbeiter vor Ort">Unsere Mitarbeiter vor Ort</h2>
+                <p data-en="Our dedicated team of nurses, health workers, and support staff serving the community daily at the Sambocho Health Center."
+                   data-de="Unser engagiertes Team aus Krankenschwestern, Gesundheitshelfern und Hilfskräften, die täglich der Gemeinde im Sambocho Health Center dienen.">
+                    Unser engagiertes Team aus Krankenschwestern, Gesundheitshelfern und Hilfskräften, die täglich der Gemeinde im Sambocho Health Center dienen.
+                </p>
+            </div>
+            <div class="team-image">
+                <img th:src="@{/images/staff-kenya.jpg}" src="/images/staff-kenya.jpg" alt="Staff at Sambocho Health Center">
+            </div>
+        </div>
+
+    </div>
+</main>
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+</body>
+</html>

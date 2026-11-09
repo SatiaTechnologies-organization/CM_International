@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | C.M.I. - Christian Mission International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+<div th:replace="~{header :: header}"></div>
+<section class="hero-section">
+    <img th:src="@{/images/hero.png}" src="/images/hero.png" alt="CMI Children and Staff" class="hero-image">
+
+    <div class="hero-overlay">
+        <span class="hero-badge" data-en="WELCOME" data-de="WILLKOMMEN">WILLKOMMEN</span>
+        <h2 data-en="Karibuni - Welcome" data-de="Karibuni - Herzlich Willkommen">Karibuni - Herzlich Willkommen</h2>
+        <p data-en="Sharing the love of Christ through education, healthcare, and community transformation." data-de="Die Liebe Christi teilen durch Bildung, Gesundheitsversorgung und Gemeinschaftstransformation.">
+            Die Liebe Christi teilen durch Bildung, Gesundheitsversorgung und Gemeinschaftstransformation.
+        </p>
+    </div>
+</section>
+<main class="main-content">
+    <div class="container grid-3-col">
+        <div class="info-card">
+            <div class="card-icon">
+                <i class="fa-solid fa-hands-praying"></i>
+            </div>
+            <h3 class="col-title" data-en="Christian Mission International" data-de="Christliche Mission International">Christliche Mission International</h3>
+            <p class="col-text" data-en="We appreciate your interest in our organization. On the next pages you will get an overview of the work of our missionary work. According to the mission of Jesus: '... Go into all the world and make disciples all peoples ...' we would like to familiarize people with the Good News of Jesus Christ."
+               data-de="Wir freuen uns über Ihr Interesse an unserer Organisation. Auf den nächsten Seiten erhalten Sie einen Überblick über die Arbeit unseres Missionswerks. Gemäß dem Auftrag Jesu: „...Geht hin in alle Welt und macht zu Jüngern alle Völker ...“ möchten wir die Menschen mit der Guten Nachricht von Jesus Christus vertraut machen.">
+                Wir freuen uns über Ihr Interesse an unserer Organisation. Auf den nächsten Seiten erhalten Sie einen Überblick über die Arbeit unseres Missionswerks. Gemäß dem Auftrag Jesu: „...Geht hin in alle Welt und macht zu Jüngern alle Völker ...“ möchten wir die Menschen mit der Guten Nachricht von Jesus Christus vertraut machen.
+            </p>
+            <p class="col-text" style="margin-top: 15px;"
+               data-en="In order to meet this mission, we work in the following areas: orphan work, evangelism, youth and student work, staff training, and medical care."
+               data-de="Um diesem Auftrag gerecht zu werden, arbeiten wir in folgenden Bereichen: Waisenkinderarbeit, Evangelisation, Jugend- und Schülerarbeit, Mitarbeiterschulung und medizinische Versorgung.">
+                Um diesem Auftrag gerecht zu werden, arbeiten wir in folgenden Bereichen: Waisenkinderarbeit, Evangelisation, Jugend- und Schülerarbeit, Mitarbeiterschulung und medizinische Versorgung.
+            </p>
+        </div>
+        <div class="info-card">
+            <div class="card-icon icon-teal">
+                <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <h3 class="col-title" data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</h3>
+            <p class="col-text" data-en="C.M.I. acquired one hectare of land in the village of Sambocho in July 2007. By building the 'Sambocho Health Center', CMI wants to contribute to improving health care at Mount Elgon. In January 2016, the 'Sambocho Health Center - SHC' was inaugurated..."
+               data-de="C.M.I. erwarb im Juli 2007 einen Hektar Land im Dorf Sambocho. Durch das Errichten des Gesundheitszentrums „Sambocho Health Center“ möchte CMI zur Verbesserung der gesundheitlichen Versorgung am Mount Elgon beitragen. Im Januar 2016 wurde das „Sambocho Health Center - SHC“ eingeweiht...">
+                C.M.I. erwarb im Juli 2007 einen Hektar Land im Dorf Sambocho. Durch das Errichten des Gesundheitszentrums „Sambocho Health Center“ möchte CMI zur Verbesserung der gesundheitlichen Versorgung am Mount Elgon beitragen. Im Januar 2016 wurde das „Sambocho Health Center - SHC“ eingeweiht...
+            </p>
+            <img th:src="@{/images/hospital.jpg}" src="/images/hospital.jpg" alt="Sambocho Health Center" class="content-image">
+        </div>
+        <div class="info-card">
+            <div class="card-icon icon-gold">
+                <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <h3 class="col-title" data-en="Stay up to date" data-de="Auf dem Laufenden bleiben">Auf dem Laufenden bleiben</h3>
+
+            <h4 class="sub-title" data-en="News & Insights" data-de="Neuigkeiten & Einblicke">Neuigkeiten & Einblicke</h4>
+            <p class="col-text" data-en="Under News you will find news that moves us this month. In our blog there are current posts." data-de="Unter Aktuelles finden Sie Neuigkeiten, die uns in diesem Monat bewegen. In unserem Blog gibt es aktuelle Beiträge.">
+                Unter Aktuelles finden Sie Neuigkeiten, die uns in diesem Monat bewegen. In unserem Blog gibt es aktuelle Beiträge.
+            </p>
+
+            <h4 class="sub-title" data-en="Our projects" data-de="Unsere Projekte">Unsere Projekte</h4>
+            <p class="col-text" data-en="We present our new project under the tribe of the Pokots." data-de="Wir stellen Ihnen unser neues Projekt unter dem Stamm der Pokots vor.">
+                Wir stellen Ihnen unser neues Projekt unter dem Stamm der Pokots vor.
+            </p>
+            <p class="col-text" data-en="Another focus is our retreat centre 'Springs of Hope'." data-de="Ein weiterer Schwerpunkt ist unser Freizeitzentrum „Springs of Hope“.">
+                Ein weiterer Schwerpunkt ist unser Freizeitzentrum „Springs of Hope“.
+            </p>
+
+            <h4 class="sub-title" data-en="Learn more" data-de="Mehr erfahren">Mehr erfahren</h4>
+            <p class="col-text" data-en="Here you will find our redesigned information brochure with up-to-date information on our work." data-de="Hier finden Sie unsere neu gestaltete Infobroschüre mit aktuellen Informationen zu unserer Arbeit.">
+                Hier finden Sie unsere neu gestaltete Infobroschüre mit aktuellen Informationen zu unserer Arbeit.
+            </p>
+        </div>
+
+    </div>
+</main>
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+
+</body>
+</html>

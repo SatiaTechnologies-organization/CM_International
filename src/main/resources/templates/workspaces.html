@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspaces | C.M.I. - Christian Mission International</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+<div th:replace="~{header :: header}"></div>
+<section class="page-title-section">
+  <div class="container">
+    <span class="hero-badge" data-en="WHAT WE DO" data-de="WAS WIR TUN">WAS WIR TUN</span>
+    <h1 data-en="Our Workspaces" data-de="Unsere Wirkungsstätten">Unsere Wirkungsstätten</h1>
+    <p data-en="Discover the core areas of our missionary work in Kenya." data-de="Entdecken Sie die Kernbereiche unserer Missionsarbeit in Kenia.">
+      Entdecken Sie die Kernbereiche unserer Missionsarbeit in Kenia.
+    </p>
+  </div>
+</section>
+<main class="workspaces-main">
+  <div class="container">
+    <section class="workspace-row">
+      <div class="workspace-image-col">
+        <img th:src="@{/images/children.jpeg}" src="/images/children.jpeg"  alt="Child Care" class="workspace-img">
+      </div>
+      <div class="workspace-text-col">
+        <h2 class="workspace-heading" data-en="Child Care" data-de="Waisenkinderarbeit">Waisenkinderarbeit</h2>
+        <p class="workspace-text"
+           data-en="At Mount Elgon, many children recently lost their parents due to land disputes. Diseases such as AIDS or alcohol addiction of parents also seriously affect the development of children. They grow up neglected or with sick parents. Child labour, prostitution and violence are vulnerable."
+           data-de="Am Mount Elgon haben viele Kinder kürzlich ihre Eltern durch Landstreitigkeiten verloren. Krankheiten wie AIDS oder Alkoholsucht der Eltern beeinträchtigen auch die Entwicklung der Kinder stark. Sie wachsen vernachlässigt oder bei kranken Eltern auf. Kinderarbeit, Prostitution und Gewalt sind sie schutzlos ausgeliefert.">
+          Am Mount Elgon haben viele Kinder kürzlich ihre Eltern durch Landstreitigkeiten verloren. Krankheiten wie AIDS oder Alkoholsucht der Eltern beeinträchtigen auch die Entwicklung der Kinder stark. Sie wachsen vernachlässigt oder bei kranken Eltern auf. Kinderarbeit, Prostitution und Gewalt sind sie schutzlos ausgeliefert.
+        </p>
+        <p class="workspace-text"
+           data-en="In our child welfare program, we currently support 68 children from primary school age to vocational training or study. The children remain integrated in a (care) family within their usual cultural environment. CMI is important to strengthen the family as the smallest social unit."
+           data-de="In unserem Kinderhilfswerk unterstützen wir derzeit 68 Kinder vom Grundschulalter bis zur Berufsausbildung oder zum Studium. Die Kinder bleiben in einer (Pflege-)Familie in ihrem gewohnten kulturellen Umfeld integriert. CMI ist es wichtig, die Familie als kleinste soziale Einheit zu stärken.">
+          In unserem Kinderhilfswerk unterstützen wir derzeit 68 Kinder vom Grundschulalter bis zur Berufsausbildung oder zum Studium. Die Kinder bleiben in einer (Pflege-)Familie in ihrem gewohnten kulturellen Umfeld integriert. CMI ist es wichtig, die Familie als kleinste soziale Einheit zu stärken.
+        </p>
+        <div class="sponsorship-box">
+          <div class="sponsorship-icon"><i class="fa-solid fa-heart"></i></div>
+          <div>
+            <h3 data-en="Sponsorship Details" data-de="Patenschaftsdetails">Patenschaftsdetails</h3>
+            <p data-en="A sponsorship of €50 per month allows the children to have a good school education at private boarding schools. They receive school books, clothes, medical care, and pastoral support."
+               data-de="Eine Patenschaft von 50 € pro Monat ermöglicht den Kindern eine gute Schulbildung an privaten Internaten. Sie erhalten Schulbücher, Kleidung, medizinische Versorgung und seelsorgerische Betreuung.">
+              Eine Patenschaft von 50 € pro Monat ermöglicht den Kindern eine gute Schulbildung an privaten Internaten. Sie erhalten Schulbücher, Kleidung, medizinische Versorgung und seelsorgerische Betreuung.
+            </p>
+            <a href="mailto:info@cmi-online.info" class="btn-sponsor">
+              <span data-en="Contact Mission Office" data-de="Missionsbüro Kontaktieren">Missionsbüro Kontaktieren</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="workspace-row reverse">
+      <div class="workspace-image-col">
+        <img th:src="@{/images/Bild_Kenia2.jpeg}" src="/images/Bild_Kenia2.jpeg"  alt="Evangelism" class="workspace-img">
+      </div>
+      <div class="workspace-text-col">
+        <h2 class="workspace-heading" data-en="Evangelism, Youth and Student Work" data-de="Evangelisation, Jugend- und Schülerarbeit">Evangelisation, Jugend- und Schülerarbeit</h2>
+        <p class="workspace-text"
+           data-en="Together with local congregations, we conduct evangelism missions on Mount Elgon and outside, show Christian films, witness the Gospel during home visits and pass on Christian literature."
+           data-de="Gemeinsam mit lokalen Gemeinden führen wir Evangelisationsmissionen am Mount Elgon und außerhalb durch, zeigen christliche Filme, bezeugen das Evangelium bei Hausbesuchen und geben christliche Literatur weiter.">
+          Gemeinsam mit lokalen Gemeinden führen wir Evangelisationsmissionen am Mount Elgon und außerhalb durch, zeigen christliche Filme, bezeugen das Evangelium bei Hausbesuchen und geben christliche Literatur weiter.
+        </p>
+        <p class="workspace-text"
+           data-en="We also lead a Bible discussion group. In doing so, we want to reach people who have never heard the gospel and tell them the Good News of Jesus Christ. We also want to encourage small local communities to work in evangelism and support them in this."
+           data-de="Wir leiten auch einen Bibelgesprächskreis. Damit wollen wir Menschen erreichen, die das Evangelium noch nie gehört haben, und ihnen die Gute Nachricht von Jesus Christus erzählen. Wir wollen auch kleine lokale Gemeinschaften ermutigen, in der Evangelisation zu arbeiten, und sie dabei unterstützen.">
+          Wir leiten auch einen Bibelgesprächskreis. Damit wollen wir Menschen erreichen, die das Evangelium noch nie gehört haben, und ihnen die Gute Nachricht von Jesus Christus erzählen. Wir wollen auch kleine lokale Gemeinschaften ermutigen, in der Evangelisation zu arbeiten, und sie dabei unterstützen.
+        </p>
+        <p class="workspace-text"
+           data-en="We teach school classes weekly and show them biblical values and their practical meaning, we organize sporting competitions and other youth events."
+           data-de="Wir unterrichten wöchentlich Schulklassen und zeigen ihnen biblische Werte und ihre praktische Bedeutung. Wir organisieren Sportwettkämpfe und andere Jugendevente.">
+          Wir unterrichten wöchentlich Schulklassen und zeigen ihnen biblische Werte und ihre praktische Bedeutung. Wir organisieren Sportwettkämpfe und andere Jugendevente.
+        </p>
+      </div>
+    </section>
+    <section class="workspace-row">
+      <div class="workspace-image-col">
+        <img th:src="@{/images/Bild_Kenia3.jpeg}" src="/images/Bild_Kenia3.jpeg"  alt="Health Care" class="workspace-img">
+      </div>
+      <div class="workspace-text-col">
+        <h2 class="workspace-heading" data-en="Health Care" data-de="Medizinische Versorgung">Medizinische Versorgung</h2>
+        <p class="workspace-text"
+           data-en="Due to the poor infrastructure, the paths to the nearest hospital are far and arduous. Every second woman releases home in poor hygienic conditions without professional help."
+           data-de="Aufgrund der schlechten Infrastruktur sind die Wege zum nächsten Krankenhaus weit und beschwerlich. Jede zweite Frau entbindet unter schlechten hygienischen Bedingungen ohne professionelle Hilfe zu Hause.">
+          Aufgrund der schlechten Infrastruktur sind die Wege zum nächsten Krankenhaus weit und beschwerlich. Jede zweite Frau entbindet unter schlechten hygienischen Bedingungen ohne professionelle Hilfe zu Hause.
+        </p>
+        <p class="workspace-text"
+           data-en="Toddlers often develop pneumonia, malaria or diarrhea. For various reasons, people only seek medical help when their condition is very serious. The average HIV infection rate in Kenya is 5.6%."
+           data-de="Kleinkinder entwickeln oft Lungenentzündungen, Malaria oder Durchfall. Aus verschiedenen Gründen suchen die Menschen erst medizinische Hilfe auf, wenn ihr Zustand sehr ernst ist. Die durchschnittliche HIV-Infektionsrate in Kenia liegt bei 5,6 %.">
+          Kleinkinder entwickeln oft Lungenentzündungen, Malaria oder Durchfall. Aus verschiedenen Gründen suchen die Menschen erst medizinische Hilfe auf, wenn ihr Zustand sehr ernst ist. Die durchschnittliche HIV-Infektionsrate in Kenia liegt bei 5,6 %.
+        </p>
+        <div class="health-services">
+          <h4 data-en="Our Sambocho Health Center offers:" data-de="Unser Sambocho Gesundheitszentrum bietet:">Unser Sambocho Gesundheitszentrum bietet:</h4>
+          <ul>
+            <li data-en="Consultations and vaccinations" data-de="Beratungen und Impfungen">Beratungen und Impfungen</li>
+            <li data-en="Pregnancy screening & newborn examinations" data-de="Schwangerschaftsvorsorge & Neugeborenenuntersuchungen">Schwangerschaftsvorsorge & Neugeborenenuntersuchungen</li>
+            <li data-en="Family planning and laboratory diagnostics" data-de="Familienplanung und Labordiagnostik">Familienplanung und Labordiagnostik</li>
+            <li data-en="Medication and obstetrics" data-de="Medikamentenausgabe und Geburtshilfe">Medikamentenausgabe und Geburtshilfe</li>
+          </ul>
+        </div>
+        <p class="workspace-text" style="margin-top: 20px;"
+           data-en="We work closely with the local government health department. Trained local specialists form the staff of the health center. Our goal is to gain the trust of the population through qualified services."
+           data-de="Wir arbeiten eng mit der lokalen Gesundheitsbehörde zusammen. Ausgebildete einheimische Fachkräfte bilden das Personal des Gesundheitszentrums. Unser Ziel ist es, durch qualifizierte Dienstleistungen das Vertrauen der Bevölkerung zu gewinnen.">
+          Wir arbeiten eng mit der lokalen Gesundheitsbehörde zusammen. Ausgebildete einheimische Fachkräfte bilden das Personal des Gesundheitszentrums. Unser Ziel ist es, durch qualifizierte Dienstleistungen das Vertrauen der Bevölkerung zu gewinnen.
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+
+</body>
+</html>

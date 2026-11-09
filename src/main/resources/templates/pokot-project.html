@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokot Project | C.M.I. - Christian Mission International</title>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+<div th:replace="~{header :: header}"></div>
+<section class="article-hero">
+    <img th:src="@{/images/pokot-hero.jpg}" src="/images/pokot-hero.jpg" alt="Pokot Landscape" class="hero-image">
+
+    <div class="hero-overlay article-hero-overlay">
+        <h2 data-en="Pokot Project" data-de="Pokot-Projekt">Pokot-Projekt</h2>
+    </div>
+</section>
+
+<!-- MAIN ARTICLE CONTENT -->
+<main class="article-content">
+    <div class="container article-container">
+
+        <h3 class="article-heading" data-en="Presentation of the new project in the Pokot strain" data-de="Präsentation des neuen Projekts unter dem Stamm der Pokot">Präsentation des neuen Projekts unter dem Stamm der Pokot</h3>
+
+        <p class="article-text" data-en="How do the Pokots live today? The Pokot in the eastern Pokot tribal area are nomads. They live in the semi-desert near the Baringo and are repeatedly affected by famine. The literacy rate is very low. Coercive circumcision and marriage of girls is unfortunately still practiced regularly. Oppression of and violence against women is a social norm. Men are mostly polygamous, so they have several women."
+           data-de="Wie leben die Pokot heute? Die Pokot im östlichen Stammesgebiet sind Nomaden. Sie leben in der Halbwüste in der Nähe des Baringosees und sind immer wieder von Hungersnöten betroffen. Die Alphabetisierungsrate ist sehr niedrig. Zwangsbeschneidungen und die Verheiratung von Mädchen werden leider immer noch regelmäßig praktiziert. Unterdrückung und Gewalt gegen Frauen sind eine gesellschaftliche Norm. Männer sind meist polygam, haben also mehrere Frauen.">
+            Wie leben die Pokot heute? Die Pokot im östlichen Stammesgebiet sind Nomaden. Sie leben in der Halbwüste in der Nähe des Baringosees und sind immer wieder von Hungersnöten betroffen. Die Alphabetisierungsrate ist sehr niedrig. Zwangsbeschneidungen und die Verheiratung von Mädchen werden leider immer noch regelmäßig praktiziert. Unterdrückung und Gewalt gegen Frauen sind eine gesellschaftliche Norm. Männer sind meist polygam, haben also mehrere Frauen.
+        </p>
+        <img th:src="@{/images/pokot-group.jpg}" src="/images/pokot-group.jpg" alt="Pokot Community" class="article-img-clean">
+
+        <p class="article-text" data-en="Wealthy older men like to decorate themselves with pretty young girl brides. There is hardly any water supply or medical assistance. Although the Christian faith is spreading, many are sticking to cultural practices. Illness and death fear the Pokot very much."
+           data-de="Wohlhabende ältere Männer schmücken sich gerne mit hübschen jungen Bräuten. Es gibt kaum eine Wasserversorgung oder medizinische Hilfe. Obwohl sich der christliche Glaube ausbreitet, halten viele an kulturellen Praktiken fest. Krankheit und Tod machen den Pokot große Angst.">
+            Wohlhabende ältere Männer schmücken sich gerne mit hübschen jungen Bräuten. Es gibt kaum eine Wasserversorgung oder medizinische Hilfe. Obwohl sich der christliche Glaube ausbreitet, halten viele an kulturellen Praktiken fest. Krankheit und Tod machen den Pokot große Angst.
+        </p>
+        <h3 class="article-heading" data-en="Our staff on site" data-de="Unser Personal vor Ort">Unser Personal vor Ort</h3>
+
+        <p class="article-text" data-en="James & Caro Satia know how to work under the Pokot. After Bible school training, they completed an apprenticeship as missionaries at the Inland Church in Africa. Subsequently, they worked for several years as missionaries for the Africa Inland Church. From 2011 to 2016 they worked for CMI at Mount Elgon. At that time, Caro and other employees looked after the orphans at Mount Elgon. James was also used for this at times. With our station manager Patrick Museve, he repeatedly went on mission missions to the various mountain regions of Mt. Elgon."
+           data-de="James & Caro Satia wissen, wie man unter den Pokot arbeitet. Nach der Bibelschulausbildung absolvierten sie eine Ausbildung zum Missionar bei der Inland Church in Afrika. Anschließend arbeiteten sie mehrere Jahre als Missionare für die Africa Inland Church. Von 2011 bis 2016 arbeiteten sie für CMI am Mount Elgon. Zu dieser Zeit kümmerten sich Caro und andere Mitarbeiter um die Waisen am Mount Elgon. Auch James wurde zeitweise dafür eingesetzt. Mit unserem Stationsleiter Patrick Museve unternahm er immer wieder Missionsreisen in die verschiedenen Bergregionen des Mt. Elgon.">
+            James & Caro Satia wissen, wie man unter den Pokot arbeitet. Nach der Bibelschulausbildung absolvierten sie eine Ausbildung zum Missionar bei der Inland Church in Afrika. Anschließend arbeiteten sie mehrere Jahre als Missionare für die Africa Inland Church. Von 2011 bis 2016 arbeiteten sie für CMI am Mount Elgon. Zu dieser Zeit kümmerten sich Caro und andere Mitarbeiter um die Waisen am Mount Elgon. Auch James wurde zeitweise dafür eingesetzt. Mit unserem Stationsleiter Patrick Museve unternahm er immer wieder Missionsreisen in die verschiedenen Bergregionen des Mt. Elgon.
+        </p>
+        <img th:src="@{/images/satia-couple.jpg}" src="/images/satia-couple.jpg" alt="James & Caro Satia" class="article-img-clean">
+
+        <p class="article-text" data-en="In 2017, James & Caro Satia were sent from the Africa Inland Church to the eastern Pokot area. It was a difficult start. After five years in the Pokot village of Kerelon, they can see the first fruits of their labor. Hygiene in the village has improved, the desire for education is growing. There are economic and good spiritual developments. New church communities and Sunday schools have emerged, people have converted to Jesus, and have been baptized. There is more peace in marriages and families. Believers turn away from alcohol. Domestic violence against women is becoming less. People now have a perspective beyond death and are beginning to fear and exclude death as such no longer so much. Since January 2022, James & Caro Satia have been working again on behalf of CMI in the village of Kerelon and the surrounding area."
+           data-de="Im Jahr 2017 wurden James & Caro Satia von der Africa Inland Church in das östliche Pokot-Gebiet entsandt. Es war ein schwieriger Start. Nach fünf Jahren im Pokot-Dorf Kerelon können sie die ersten Früchte ihrer Arbeit sehen. Die Hygiene im Dorf hat sich verbessert, der Wunsch nach Bildung wächst. Es gibt wirtschaftliche und gute geistliche Entwicklungen. Neue Kirchengemeinden und Sonntagsschulen sind entstanden, Menschen haben sich zu Jesus bekehrt und wurden getauft. Es gibt mehr Frieden in Ehen und Familien. Gläubige wenden sich vom Alkohol ab. Häusliche Gewalt gegen Frauen nimmt ab. Die Menschen haben nun eine Perspektive über den Tod hinaus und beginnen, den Tod als solchen nicht mehr so sehr zu fürchten und auszugrenzen. Seit Januar 2022 sind James & Caro Satia wieder im Auftrag von CMI im Dorf Kerelon und der Umgebung tätig.">
+            Im Jahr 2017 wurden James & Caro Satia von der Africa Inland Church in das östliche Pokot-Gebiet entsandt. Es war ein schwieriger Start. Nach fünf Jahren im Pokot-Dorf Kerelon können sie die ersten Früchte ihrer Arbeit sehen. Die Hygiene im Dorf hat sich verbessert, der Wunsch nach Bildung wächst. Es gibt wirtschaftliche und gute geistliche Entwicklungen. Neue Kirchengemeinden und Sonntagsschulen sind entstanden, Menschen haben sich zu Jesus bekehrt und wurden getauft. Es gibt mehr Frieden in Ehen und Familien. Gläubige wenden sich vom Alkohol ab. Häusliche Gewalt gegen Frauen nimmt ab. Die Menschen haben nun eine Perspektive über den Tod hinaus und beginnen, den Tod als solchen nicht mehr so sehr zu fürchten und auszugrenzen. Seit Januar 2022 sind James & Caro Satia wieder im Auftrag von CMI im Dorf Kerelon und der Umgebung tätig.
+        </p>
+        <h3 class="article-heading" data-en="What should the work look like?" data-de="Wie soll die Arbeit aussehen?">Wie soll die Arbeit aussehen?</h3>
+        <img th:src="@{/images/pokot-work.jpg}" src="/images/pokot-work.jpg" alt="Pokot Work" class="article-img-left">
+        <p class="article-text" data-en="James & Caro Satia continue to support A.I.C. Churches and Sunday Schools. The population in Kerelon is growing. People move there because it is a peaceful area in a troubled region. There is pasture for the animals. In addition to bringing the gospel of Jesus to people and accompanying the new faithful in their spiritual growth, Satias have the following concerns: Water supply for the village, medical care for the village, help to self-help (e.g. chopping and seed, goat project). Allowing good schooling through next-generation child sponsorships. This lays the foundation for the Pokot itself to find solutions to problems such as poverty or destructive cultural practices."
+           data-de="James & Caro Satia unterstützen weiterhin A.I.C. Kirchen und Sonntagsschulen. Die Bevölkerung in Kerelon wächst. Die Menschen ziehen dorthin, weil es eine friedliche Gegend in einer unruhigen Region ist. Es gibt Weideland für die Tiere. Neben der Verkündigung des Evangeliums von Jesus und der Begleitung der neuen Gläubigen in ihrer geistlichen Entwicklung haben die Satias folgende Anliegen: Wasserversorgung für das Dorf, medizinische Versorgung für das Dorf, Hilfe zur Selbsthilfe (z.B. Hacken und Saatgut, Ziegenprojekt). Ermöglichung einer guten Schulbildung durch Patenschaften für Kinder der nächsten Generation. Dies legt die Grundlage dafür, dass die Pokot selbst Lösungen für Probleme wie Armut oder zerstörerische kulturelle Praktiken finden.">
+            James & Caro Satia unterstützen weiterhin A.I.C. Kirchen und Sonntagsschulen. Die Bevölkerung in Kerelon wächst. Die Menschen ziehen dorthin, weil es eine friedliche Gegend in einer unruhigen Region ist. Es gibt Weideland für die Tiere. Neben der Verkündigung des Evangeliums von Jesus und der Begleitung der neuen Gläubigen in ihrer geistlichen Entwicklung haben die Satias folgende Anliegen: Wasserversorgung für das Dorf, medizinische Versorgung für das Dorf, Hilfe zur Selbsthilfe (z.B. Hacken und Saatgut, Ziegenprojekt). Ermöglichung einer guten Schulbildung durch Patenschaften für Kinder der nächsten Generation. Dies legt die Grundlage dafür, dass die Pokot selbst Lösungen für Probleme wie Armut oder zerstörerische kulturelle Praktiken finden.
+        </p>
+
+        <p class="article-text" data-en="Satias cannot change the culture, but they want to educate, knowledge and awareness about harmful cultural practices, e.g. the dire consequences of girl circumcision (genital mutilation). Through mission and faith in Jesus Christ, people can be freed from the constraints of the religion of nature, which has also produced the circumcision of girls. A biblical way of thinking should thus take hold and thus make various bad practices disappear."
+           data-de="Die Satias können die Kultur nicht ändern, aber sie wollen aufklären, Wissen und Bewusstsein für schädliche kulturelle Praktiken schaffen, z. B. für die schrecklichen Folgen der Mädchenbeschneidung (Genitalverstümmelung). Durch Mission und Glauben an Jesus Christus können die Menschen von den Zwängen der Naturreligion befreit werden, die auch die Beschneidung von Mädchen hervorgebracht hat. Eine biblische Denkweise soll sich so durchsetzen und verschiedene schlechte Praktiken verschwinden lassen.">
+            Die Satias können die Kultur nicht ändern, aber sie wollen aufklären, Wissen und Bewusstsein für schädliche kulturelle Praktiken schaffen, z. B. für die schrecklichen Folgen der Mädchenbeschneidung (Genitalverstümmelung). Durch Mission und Glauben an Jesus Christus können die Menschen von den Zwängen der Naturreligion befreit werden, die auch die Beschneidung von Mädchen hervorgebracht hat. Eine biblische Denkweise soll sich so durchsetzen und verschiedene schlechte Praktiken verschwinden lassen.
+        </p>
+        <h3 class="article-heading" data-en="More impressions of our Pokot project" data-de="Mehr Eindrücke von unserem Pokot-Projekt">Mehr Eindrücke von unserem Pokot-Projekt</h3>
+
+        <p class="article-text" data-en="Watch the video below to see the project in action." data-de="Sehen Sie sich das Video unten an, um das Projekt in Aktion zu sehen.">
+            Sehen Sie sich das Video unten an, um das Projekt in Aktion zu sehen.
+        </p>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" title="Pokot Project Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </div>
+</main>
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+</body>
+</html>

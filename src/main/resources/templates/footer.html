@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<footer th:fragment="footer" class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a th:href="@{/}" href="/" class="footer-logo-link">
+                    <img th:src="@{/images/logo.jpeg}" src="/images/logo.jpeg" alt="CMI Logo" class="footer-logo">
+                    <span class="footer-brand-text">CHRISTIAN MISSION <span>INTERNATIONAL</span></span>
+                </a>
+                <p data-en="A German-funded mission in Kenya, bringing education, healthcare and hope through Christ."
+                   data-de="Eine von Deutschland unterstützte Mission in Kenia, die durch Christus Bildung, Gesundheitsversorgung und Hoffnung bringt.">
+                    Eine von Deutschland unterstützte Mission in Kenia, die durch Christus Bildung, Gesundheitsversorgung und Hoffnung bringt.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links-col">
+                <h4 data-en="Quick Links" data-de="Schnellzugriff">Schnellzugriff</h4>
+                <ul class="footer-nav">
+                    <li><a th:href="@{/}" href="/" data-en="Home" data-de="Startseite">Startseite</a></li>
+                    <li><a th:href="@{/work-area}" href="/work-area" data-en="Work Area" data-de="Arbeitsbereiche">Arbeitsbereiche</a></li>
+                    <li><a href="#" data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</a></li>
+                    <li><a href="#" data-en="Pokot Project" data-de="Pokot-Projekt">Pokot-Projekt</a></li>
+                    <li><a href="#" data-en="Springs of Hope" data-de="Springs of Hope">Springs of Hope</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-col">
+                <h4 data-en="Contact" data-de="Kontakt">Kontakt</h4>
+                <ul class="footer-contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> CMI Centre, Kitale, Kenia</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@cmi-online.info</li>
+                    <li><i class="fa-solid fa-globe"></i> cmi-online.info</li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter-col">
+                <h4 data-en="Subscribe to Newsletter" data-de="Newsletter abonnieren">Newsletter abonnieren</h4>
+                <p class="newsletter-desc" data-en="Stay up to date with our mission and projects in Kenya." data-de="Bleiben Sie auf dem Laufenden über unsere Mission und Projekte in Kenia.">
+                    Bleiben Sie auf dem Laufenden über unsere Mission und Projekte in Kenia.
+                </p>
+
+                <form class="modern-newsletter-form" action="#" method="POST">
+                    <div class="input-group">
+                        <input type="email" placeholder="E-Mail-Adresse *" data-en-placeholder="Email address *" data-de-placeholder="E-Mail-Adresse *" required>
+                        <button type="submit" class="btn-subscribe-modern">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="form-check-modern">
+                        <input type="checkbox" id="privacy-check" required>
+                        <label for="privacy-check" data-en="I agree to the privacy policy." data-de="Ich stimme der Datenschutzerklärung zu.">
+                            Ich stimme der Datenschutzerklärung zu.
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                <span data-en="&copy; 2026 CMI - Christian Mission International. All rights reserved." data-de="&copy; 2026 CMI - Christliche Mission International. Alle Rechte vorbehalten.">
+                    &copy; 2026 CMI - Christliche Mission International. Alle Rechte vorbehalten.
+                </span>
+            </div>
+            <div class="footer-legal-links">
+                <a href="#" data-en="Imprint" data-de="Impressum">Impressum</a>
+                <a href="#" data-en="Privacy Policy" data-de="Datenschutz">Datenschutz</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMI | Christian Mission International</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/cmi.css}" href="/css/cmi.css">
+</head>
+<body>
+
+<header th:fragment="header" class="site-header">
+    <div class="top-bar">
+        <div class="container header-top">
+            <a th:href="@{/}" href="/" class="brand-logo">
+                <img th:src="@{/images/logo.jpeg}" src="/images/logo.jpeg" alt="CMI Logo" class="logo-img">
+                <h1 class="brand-title">
+                    CHRISTIAN MISSION <span>INTERNATIONAL</span>
+                </h1>
+            </a>
+            <div class="language-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn active" data-lang="de">DE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-bar">
+        <div class="container header-bottom">
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a th:href="@{/}" href="/" class="nav-link active" data-en="Home" data-de="Startseite">Startseite</a>
+                <a th:href="@{/work-area}" href="/work-area" class="nav-link" data-en="Work area" data-de="Arbeitsbereiche">Arbeitsbereiche</a>
+                <a th:href="@{/workspaces}" href="/workspaces" class="nav-link" data-en="Workspaces" data-de="Wirkungsstätten">Wirkungsstätten</a>
+                <a th:href="@{/health-center}" href="/health-center" class="nav-link" data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</a>
+                <a th:href="@{/pokot-project}" href="/pokot-project" class="nav-link" data-en="Pokot project" data-de="Pokot-Projekt">Pokot-Projekt</a>
+                <a th:href="@{team}" href="/team" class="nav-link" data-en="Team" data-de="Team">Team</a>
+                <a th:href="@{/news}" href="/news" class="nav-link" data-en="News" data-de="Neuigkeiten">Neuigkeiten</a>
+                <a th:href="@{/blog}" href="/blog" class="nav-link" data-en="Blog" data-de="Blog">Blog</a>
+            </nav>
+            <div class="dropdown">
+                <button class="btn-donate">
+                    <span data-en="SUPPORT" data-de="UNTERSTÜTZEN">UNTERSTÜTZEN</span>
+                    <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#donate"><i class="fa-solid fa-heart"></i> <span data-en="Donate" data-de="Spenden">Spenden</span></a>
+                    <a href="#springs"><i class="fa-solid fa-house-chimney-window"></i> Springs of Hope</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="mobile-header">
+        <button id="mobileMenuBtn" class="menu-btn">
+            <i class="fa-solid fa-bars"></i> <span data-en="Menu" data-de="Menü">Menü</span>
+        </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu hidden">
+        <div class="mobile-lang-switch">
+            <button class="lang-btn mobile-lang" data-lang="en">English</button>
+            <button class="lang-btn mobile-lang active" data-lang="de">Deutsch</button>
+        </div>
+
+        <a th:href="@{/}" href="/" class="mobile-link" data-en="Home" data-de="Startseite">Startseite</a>
+        <a th:href="@{/work-area}" href="/work-area" class="mobile-link" data-en="Work area" data-de="Arbeitsbereiche">Arbeitsbereiche</a>
+        <a th:href="@{/workspaces}" href="/workspaces" class="mobile-link" data-en="Workspaces" data-de="Wirkungsstätten">Wirkungsstätten</a>
+        <a th:href="@{/health-center}" href="/health-center" class="mobile-link" data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</a>
+        <a th:href="@{/pokot-project}" href="/pokot-project" class="mobile-link" data-en="Pokot project" data-de="Pokot-Projekt">Pokot-Projekt</a>
+        <a th:href="@{/team}" href="/team" class="mobile-link" data-en="Team" data-de="Team">Team</a>
+        <a th:href="@{/news}" href="/news" class="mobile-link" data-en="News" data-de="Neuigkeiten">Neuigkeiten</a>
+        <a th:href="@{/blog}" href="/blog" class="mobile-link" data-en="Blog" data-de="Blog">Blog</a>
+        <div class="mobile-support-group">
+            <a href="#donate" class="mobile-link mobile-support"><i class="fa-solid fa-heart"></i> <span data-en="Donate" data-de="Spenden">Spenden</span></a>
+            <a href="#springs" class="mobile-link mobile-support"><i class="fa-solid fa-house-chimney-window"></i> Springs of Hope</a>
+        </div>
+    </div>
+
+</header>
+<main style="min-height: 100vh; padding: 50px; text-align: center;">
+    <h2>Page Content Goes Here</h2>
+</main>
+<script th:src="@{/js/cmi.js}" src="/js/cmi.js"></script>
+</body>
+</html>

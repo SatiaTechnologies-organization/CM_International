@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Area | C.M.I. - Christian Mission International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+<div th:replace="~{header :: header}"></div>
+
+<section class="article-hero">
+    <img th:src="@{/images/kenia_mount_elgon.png}" src="/images/kenia_mount_elgon.jpg" alt="Kenya Landscape" class="hero-image">
+
+    <div class="hero-overlay article-hero-overlay">
+        <h2 data-en="Kenya - Mount Elgon" data-de="Kenia - Mount Elgon">Kenia - Mount Elgon</h2>
+    </div>
+</section>
+
+<main class="article-content">
+    <div class="container article-container">
+
+        <p class="article-text" data-en="Our field of work is currently in Kenya." data-de="Unser Arbeitsgebiet liegt derzeit in Kenia.">
+            Unser Arbeitsgebiet liegt derzeit in Kenia.
+        </p>
+
+        <p class="article-text" data-en="Kenya is slightly larger in terms of area than France or about the size of Texas in the United States." data-de="Kenia ist flächenmäßig etwas größer als Frankreich oder etwa so groß wie Texas in den USA.">
+            Kenia ist flächenmäßig etwas größer als Frankreich oder etwa so groß wie Texas in den USA.
+        </p>
+
+        <p class="article-text" data-en="The equator divides the country almost exactly in half; with the Indian Ocean on the east coast and the vast Lake Victoria in the west, Kenya is a truly contrasting country." data-de="Der Äquator teilt das Land fast genau in zwei Hälften; mit dem Indischen Ozean an der Ostküste und dem riesigen Viktoriasee im Westen ist Kenia ein wirklich kontrastreiches Land.">
+            Der Äquator teilt das Land fast genau in zwei Hälften; mit dem Indischen Ozean an der Ostküste und dem riesigen Viktoriasee im Westen ist Kenia ein wirklich kontrastreiches Land.
+        </p>
+
+        <p class="article-text" data-en="Most of the 48 million inhabitants populate the fertile highlands. They live mainly on agriculture and livestock farming. Overall, however, only about 10 - 20% of Kenya's total area is suitable for agriculture. The rest of the country is desert. Nairobi is the capital of Kenya with three million inhabitants. In 1963, Kenya gained its independence from Great Britain." data-de="Die meisten der 48 Millionen Einwohner besiedeln das fruchtbare Hochland. Sie leben hauptsächlich von Ackerbau und Viehzucht. Insgesamt sind jedoch nur etwa 10 bis 20 % der Gesamtfläche Kenias für die Landwirtschaft geeignet. Der Rest des Landes ist Wüste. Nairobi ist die Hauptstadt Kenias mit drei Millionen Einwohnern. Im Jahr 1963 erlangte Kenia seine Unabhängigkeit von Großbritannien.">
+            Die meisten der 48 Millionen Einwohner besiedeln das fruchtbare Hochland. Sie leben hauptsächlich von Ackerbau und Viehzucht. Insgesamt sind jedoch nur etwa 10 bis 20 % der Gesamtfläche Kenias für die Landwirtschaft geeignet. Der Rest des Landes ist Wüste. Nairobi ist die Hauptstadt Kenias mit drei Millionen Einwohnern. Im Jahr 1963 erlangte Kenia seine Unabhängigkeit von Großbritannien.
+        </p>
+        <img th:src="@{/images/Bild_Kenia.png}" src="/images/Bild_Kenia.jpg" alt="Giraffes in Kenya" class="article-image-right">
+
+        <p class="article-text" data-en="Kenya's population is composed of over 40 ethnic groups together and has more than 42 different languages. Swahili and English are official languages." data-de="Die Bevölkerung Kenias setzt sich aus über 40 ethnischen Gruppen zusammen und umfasst mehr als 42 verschiedene Sprachen. Swahili und Englisch sind die offiziellen Sprachen.">
+            Die Bevölkerung Kenias setzt sich aus über 40 ethnischen Gruppen zusammen und umfasst mehr als 42 verschiedene Sprachen. Swahili und Englisch sind die offiziellen Sprachen.
+        </p>
+
+        <p class="article-text" data-en="There is religious freedom in the country, four out of five Kenyans belong to Christianity. In Muslim-dominated parts of the country, the Christian minority is oppressed. In the most recent past, the terrorist organization Al Shabaab repeatedly carried out attacks in Kenya. On the World Persecution Index for Christian Persecution, Kenya is currently ranked 16th." data-de="Im Land herrscht Religionsfreiheit; vier von fünf Kenianern sind Christen. In muslimisch dominierten Teilen des Landes wird die christliche Minderheit unterdrückt. In der jüngsten Vergangenheit hat die Terrororganisation Al-Shabaab wiederholt Anschläge in Kenia verübt. Auf dem Weltverfolgungsindex für Christenverfolgung steht Kenia derzeit an 16. Stelle.">
+            Im Land herrscht Religionsfreiheit; vier von fünf Kenianern sind Christen. In muslimisch dominierten Teilen des Landes wird die christliche Minderheit unterdrückt. In der jüngsten Vergangenheit hat die Terrororganisation Al-Shabaab wiederholt Anschläge in Kenia verübt. Auf dem Weltverfolgungsindex für Christenverfolgung steht Kenia derzeit an 16. Stelle.
+        </p>
+
+        <h3 class="article-heading" data-en="Mount Elgon" data-de="Mount Elgon">Mount Elgon</h3>
+
+        <p class="article-text" data-en="Mount Elgon is located in western Kenya, directly on the border with Uganda. With a height of 4321m and a diameter of 80 km, this extinct volcano is the second highest mountain in Kenya. Below its peaks stretches rain and bamboo forest, where elephants, kaffer buffalo and leopards live. The lower regions are very fertile. Corn, wheat, coffee, tea and much else thrive very well there." data-de="Der Mount Elgon liegt im Westen Kenias, direkt an der Grenze zu Uganda. Mit einer Höhe von 4321 m und einem Durchmesser von 80 km ist dieser erloschene Vulkan der zweithöchste Berg Kenias. Unterhalb der Gipfel erstreckt sich Regen- und Bambuswald, in dem Elefanten, Kaffernbüffel und Leoparden leben. Die tieferen Regionen sind sehr fruchtbar. Mais, Weizen, Kaffee, Tee und vieles mehr gedeihen dort sehr gut.">
+            Der Mount Elgon liegt im Westen Kenias, direkt an der Grenze zu Uganda. Mit einer Höhe von 4321 m und einem Durchmesser von 80 km ist dieser erloschene Vulkan der zweithöchste Berg Kenias. Unterhalb der Gipfel erstreckt sich Regen- und Bambuswald, in dem Elefanten, Kaffernbüffel und Leoparden leben. Die tieferen Regionen sind sehr fruchtbar. Mais, Weizen, Kaffee, Tee und vieles mehr gedeihen dort sehr gut.
+        </p>
+
+        <p class="article-text" data-en="Mount Elgon is home to the Sabaot, also called Elgonmasai. This tribe has at least 250,000 people. Sabaot belong to the group of Kalenjin, or Nilotes. They had to switch their original way of life as nomads to agriculture in the past decades, as there was not enough pastureland. Cows are the most important and valuable animals for Sabaot, corn porridge with sour milk is a popular dish." data-de="Der Mount Elgon ist die Heimat der Sabaot, auch Elgonmassai genannt. Dieser Stamm hat mindestens 250.000 Mitglieder. Die Sabaot gehören zur Gruppe der Kalenjin oder Nilotischen Völker. In den letzten Jahrzehnten mussten sie ihre ursprüngliche nomadische Lebensweise auf die Landwirtschaft umstellen, da es nicht genügend Weideland gab. Kühe sind die wichtigsten und wertvollsten Nutztiere der Sabaot; Maisbrei mit saurer Milch ist eine beliebte Speise.">
+            Der Mount Elgon ist die Heimat der Sabaot, auch Elgonmassai genannt. Dieser Stamm hat mindestens 250.000 Mitglieder. Die Sabaot gehören zur Gruppe der Kalenjin oder Nilotischen Völker. In den letzten Jahrzehnten mussten sie ihre ursprüngliche nomadische Lebensweise auf die Landwirtschaft umstellen, da es nicht genügend Weideland gab. Kühe sind die wichtigsten und wertvollsten Nutztiere der Sabaot; Maisbrei mit saurer Milch ist eine beliebte Speise.
+        </p>
+
+        <p class="article-text" data-en="Traditionally, the Sabaot have always believed in a creator god who gives sun, rain and life. However, this God is far away and the belief in the spirits of their ancestors, who hold happiness or misfortune in their hands, determine their daily life. Wycliff Bible Translator began exploring the Sabaot language in 1981 and translating the Bible. Since 2012, the entire Bible has been available in Sabaot." data-de="Traditionell glaubten die Sabaot immer an einen Schöpfergott, der Sonne, Regen und Leben spendet. Dieser Gott ist jedoch weit weg, und der Glaube an die Geister ihrer Vorfahren, die Glück oder Unglück in ihren Händen halten, bestimmt ihr tägliches Leben. 1981 begann Wycliff Bible Translator, die Sprache der Sabaot zu erforschen und die Bibel zu übersetzen. Seit 2012 ist die gesamte Bibel in der Sprache der Sabaot verfügbar.">
+            Traditionell glaubten die Sabaot immer an einen Schöpfergott, der Sonne, Regen und Leben spendet. Dieser Gott ist jedoch weit weg, und der Glaube an die Geister ihrer Vorfahren, die Glück oder Unglück in ihren Händen halten, bestimmt ihr tägliches Leben. 1981 begann Wycliff Bible Translator, die Sprache der Sabaot zu erforschen und die Bibel zu übersetzen. Seit 2012 ist die gesamte Bibel in der Sprache der Sabaot verfügbar.
+        </p>
+
+        <p class="article-text" data-en="Nowadays, most children attend at least one primary school. Many adults are illiterate. Although the land is fruitful, many lack the capital and knowledge to make good use of their land. Many still suffer from hunger. Old, traditional values are decaying more and more, the excessive consumption of home-brewed beer destroys many families." data-de="Heutzutage besuchen die meisten Kinder mindestens eine Grundschule. Viele Erwachsene sind Analphabeten. Obwohl das Land fruchtbar ist, fehlt es vielen an Kapital und Wissen, um ihr Land gut zu nutzen. Viele leiden noch immer unter Hunger. Alte, traditionelle Werte verfallen mehr und mehr, der übermäßige Konsum von selbst gebrautem Bier zerstört viele Familien.">
+            Heutzutage besuchen die meisten Kinder mindestens eine Grundschule. Viele Erwachsene sind Analphabeten. Obwohl das Land fruchtbar ist, fehlt es vielen an Kapital und Wissen, um ihr Land gut zu nutzen. Viele leiden noch immer unter Hunger. Alte, traditionelle Werte verfallen mehr und mehr, der übermäßige Konsum von selbst gebrautem Bier zerstört viele Familien.
+        </p>
+
+        <p class="article-text" data-en="In addition, inadequate medical care, poor infrastructure and the general underdevelopment of the area endanger the lives of children and young people." data-de="Darüber hinaus gefährden eine unzureichende medizinische Versorgung, eine schlechte Infrastruktur und die allgemeine Unterentwicklung der Region das Leben von Kindern und Jugendlichen.">
+            Darüber hinaus gefährden eine unzureichende medizinische Versorgung, eine schlechte Infrastruktur und die allgemeine Unterentwicklung der Region das Leben von Kindern und Jugendlichen.
+        </p>
+
+    </div>
+</main>
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+
+</body>
+</html>

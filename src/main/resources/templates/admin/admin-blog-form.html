@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog Post | Admin</title>
+    <link rel="stylesheet" th:href="@{/cmi.css}">
+</head>
+<body style="background: #f4f6f8; margin: 0;">
+<div th:replace="~{admin-header :: admin-header}"></div>
+
+<div class="admin-form-wrapper">
+    <h2>Create New Blog Post</h2>
+
+    <form th:action="@{/admin/blog/save}" th:object="${post}" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>Title (English):</label>
+            <input type="text" th:field="*{titleEn}" required placeholder="Impact Move 2026">
+        </div>
+
+        <div class="form-group">
+            <label>Category (English):</label>
+            <input type="text" th:field="*{categoryEn}" required placeholder="PROJECTS">
+        </div>
+
+        <div class="form-group">
+            <label>Main Content (English):</label>
+            <textarea th:field="*{contentEn}" rows="6" required placeholder="Write the main text here. Paragraphs are respected."></textarea>
+        </div>
+
+        <hr style="margin: 30px 0; border: 1px solid #eee;">
+        <h3 style="margin-bottom: 15px; color: #174d2e;">Images & Descriptions</h3>
+
+        <!-- Container for dynamic images -->
+        <div id="image-container">
+            <div class="image-block" style="background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px;">
+                <div class="form-group">
+                    <label>Image File:</label>
+                    <input type="file" name="imageFiles" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label>Image Description (English):</label>
+                    <textarea name="imageDescriptions" rows="2" placeholder="Describe what happens in this picture..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" onclick="addImageBlock()" style="background: #e2e8f0; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-bottom: 30px;">+ Add Another Image</button>
+
+        <div class="form-actions" style="border-top: 1px solid #eee; padding-top: 20px;">
+            <button type="submit" class="btn-admin">Publish & Translate</button>
+            <a th:href="@{/admin/blog}" class="cancel-link">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/js/cmi.js}"></script>
+<script>
+    function addImageBlock() {
+        const container = document.getElementById('image-container');
+        const newBlock = document.createElement('div');
+        newBlock.className = 'image-block';
+        newBlock.style = "background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px;";
+        newBlock.innerHTML = `
+            <div class="form-group">
+                <label>Image File:</label>
+                <input type="file" name="imageFiles" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label>Image Description (English):</label>
+                <textarea name="imageDescriptions" rows="2" placeholder="Describe what happens in this picture..."></textarea>
+            </div>
+            <button type="button" onclick="this.parentElement.remove()" style="color: red; background: none; border: none; cursor: pointer; font-size: 13px;">Remove Image</button>
+        `;
+        container.appendChild(newBlock);
+    }
+</script>
+</body>
+</html>
