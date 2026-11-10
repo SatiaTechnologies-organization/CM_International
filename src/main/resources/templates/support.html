@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Donations | CMI</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+<main class="support-page">
+    <div class="container">
+
+        <!-- HEADER SECTION -->
+        <div class="support-header">
+            <h1 data-en="Support and Donations" data-de="Unterstützung und Spenden">Unterstützung und Spenden</h1>
+            <p data-en="The work of CMI is financed exclusively by donations (money and in-kind donations)." data-de="Die Arbeit von CMI wird ausschließlich durch Spenden (Geld- und Sachspenden) finanziert.">
+                Die Arbeit von CMI wird ausschließlich durch Spenden (Geld- und Sachspenden) finanziert.
+            </p>
+            <p data-en="The circles of friends of our employees, interested persons and various Christian groups and congregations are significantly involved in this." data-de="Die Freundeskreise unserer Mitarbeiter, interessierte Personen sowie verschiedene christliche Gruppen und Gemeinden sind daran maßgeblich beteiligt.">
+                Die Freundeskreise unserer Mitarbeiter, interessierte Personen sowie verschiedene christliche Gruppen und Gemeinden sind daran maßgeblich beteiligt.
+            </p>
+        </div>
+
+        <!-- CHECKMARKS ROW -->
+        <div class="support-features">
+            <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <span data-en="Almost 100% goes to the projects in Kenya" data-de="Fast 100 % fließen in die Projekte in Kenia">Fast 100 % fließen in die Projekte in Kenia</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <span data-en="Administrative burden below 5%" data-de="Verwaltungsaufwand unter 5 %">Verwaltungsaufwand unter 5 %</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <span data-en="Donation receipt possible" data-de="Spendenquittung möglich">Spendenquittung möglich</span>
+            </div>
+        </div>
+
+        <!-- WHAT YOU CAN DONATE TO -->
+        <h2 class="section-heading" data-en="What you can donate to" data-de="Wofür Sie spenden können">Wofür Sie spenden können</h2>
+
+        <div class="donation-grid">
+            <!-- Card 1 -->
+            <div class="donate-card">
+                <h3 data-en="General donation" data-de="Allgemeine Spende">Allgemeine Spende</h3>
+                <p data-en="Your contribution goes where it is most urgently needed." data-de="Ihr Beitrag geht dorthin, wo er am dringendsten benötigt wird.">
+                    Ihr Beitrag geht dorthin, wo er am dringendsten benötigt wird.
+                </p>
+                <p data-en="For example, for vehicle maintenance, evangelism missions, special projects such as buildings or the further training of employees." data-de="Zum Beispiel für Fahrzeugwartung, Evangelisationsmissionen, Sonderprojekte wie Gebäude oder die Weiterbildung von Mitarbeitern.">
+                    Zum Beispiel für Fahrzeugwartung, Evangelisationsmissionen, Sonderprojekte wie Gebäude oder die Weiterbildung von Mitarbeitern.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="donate-card">
+                <h3 data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</h3>
+                <p data-en="Preventive and curative services, outpatient and, if necessary, inpatient. Prenatal and postnatal care are free of charge." data-de="Präventive und kurative Leistungen, ambulant und ggf. stationär. Schwangerenvorsorge und Wochenbettbetreuung sind kostenlos.">
+                    Präventive und kurative Leistungen, ambulant und ggf. stationär. Schwangerenvorsorge und Wochenbettbetreuung sind kostenlos.
+                </p>
+                <ul class="donation-list">
+                    <li><span class="highlight">approx. 50 €</span> <span data-en="Routine examinations per patient" data-de="Routineuntersuchungen pro Patient">Routineuntersuchungen pro Patient</span></li>
+                    <li><span class="highlight">approx. 200 €</span> <span data-en="A mobile operation in remote mountain villages" data-de="Eine mobile Operation in abgelegenen Bergdörfern">Eine mobile Operation in abgelegenen Bergdörfern</span></li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="donate-card">
+                <h3 data-en="Foster family" data-de="Pflegefamilie">Pflegefamilie</h3>
+                <p data-en="We support foster families in covering their basic needs." data-de="Wir unterstützen Pflegefamilien bei der Deckung ihres Grundbedarfs.">
+                    Wir unterstützen Pflegefamilien bei der Deckung ihres Grundbedarfs.
+                </p>
+                <ul class="donation-list">
+                    <li><span class="highlight">5 €</span> <span data-en="Monthly health insurance contribution for a foster family" data-de="Monatlicher Krankenversicherungsbeitrag für eine Pflegefamilie">Monatlicher Krankenversicherungsbeitrag für eine Pflegefamilie</span></li>
+                    <li><span class="highlight">25 €</span> <span data-en="Textbooks for one primary school year per child" data-de="Schulbücher für ein Grundschuljahr pro Kind">Schulbücher für ein Grundschuljahr pro Kind</span></li>
+                    <li><span class="highlight">approx. 500 €</span> <span data-en="A day trip of children's leisure" data-de="Ein Tagesausflug der Kinderfreizeit">Ein Tagesausflug der Kinderfreizeit</span></li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="donate-card">
+                <h3 data-en="Healthcare professional" data-de="Gesundheitsfachkraft">Gesundheitsfachkraft</h3>
+                <p data-en="We ensure that the local staff are well trained and know the culture." data-de="Wir sorgen dafür, dass das lokale Personal gut ausgebildet ist und die Kultur kennt.">
+                    Wir sorgen dafür, dass das lokale Personal gut ausgebildet ist und die Kultur kennt.
+                </p>
+                <ul class="donation-list">
+                    <li><span class="highlight">approx. 300 €</span> <span data-en="Monthly salary costs of a healthcare professional (average)" data-de="Monatliche Gehaltskosten einer Gesundheitsfachkraft (Durchschnitt)">Monatliche Gehaltskosten einer Gesundheitsfachkraft (Durchschnitt)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HOW TO DONATE -->
+        <h2 class="section-heading" data-en="How to donate" data-de="Wie Sie spenden können">Wie Sie spenden können</h2>
+
+        <div class="donation-methods">
+            <!-- PayPal Box -->
+            <div class="method-card">
+                <h3>PayPal</h3>
+                <p data-en="Donate easily and securely online." data-de="Spenden Sie einfach und sicher online.">Spenden Sie einfach und sicher online.</p>
+                <!-- Replace with your actual PayPal link -->
+                <a href="https://www.paypal.com/donate" target="_blank" class="btn-paypal">
+                    <i class="fa-brands fa-paypal"></i> Donate with PayPal
+                </a>
+            </div>
+
+            <!-- Bank Transfer Box -->
+            <div class="method-card">
+                <h3 data-en="Bank transfer" data-de="Banküberweisung">Banküberweisung</h3>
+                <div class="bank-details">
+                    <p><strong data-en="Recipient:" data-de="Empfänger:">Empfänger:</strong> Christl. Mission International</p>
+                    <p><strong data-en="Bank:" data-de="Bank:">Bank:</strong> Volksbank in der Region</p>
+                    <p><strong>IBAN:</strong> DE04 6039 1310 0145 2980 00</p>
+                    <p><strong>BIC:</strong> GENODES1VBH</p>
+                    <p><strong data-en="Purpose:" data-de="Verwendungszweck:">Verwendungszweck:</strong> e.g. specify "health center" or "sponsored children"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DONATION RECEIPT -->
+        <div class="donation-receipt">
+            <h3 data-en="Donation receipt" data-de="Spendenquittung">Spendenquittung</h3>
+            <p data-en="CMI is recognized by the Freudenstadt tax office as a non-profit organization and is allowed to issue donation receipts." data-de="CMI ist vom Finanzamt Freudenstadt als gemeinnützig anerkannt und berechtigt, Spendenbescheinigungen auszustellen.">
+                CMI ist vom Finanzamt Freudenstadt als gemeinnützig anerkannt und berechtigt, Spendenbescheinigungen auszustellen.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+<div th:replace="~{footer :: footer}"></div>
+<script th:src="@{/cmi.js}" src="/js/cmi.js"></script>
+
+</body>
+</html>

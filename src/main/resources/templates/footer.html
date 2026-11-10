@@ -23,17 +23,17 @@
                 </p>
             </div>
 
-            <!-- Column 2: Quick Links -->
             <div class="footer-links-col">
                 <h4 data-en="Quick Links" data-de="Schnellzugriff">Schnellzugriff</h4>
                 <ul class="footer-nav">
                     <li><a th:href="@{/}" href="/" data-en="Home" data-de="Startseite">Startseite</a></li>
                     <li><a th:href="@{/work-area}" href="/work-area" data-en="Work Area" data-de="Arbeitsbereiche">Arbeitsbereiche</a></li>
-                    <li><a href="#" data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</a></li>
-                    <li><a href="#" data-en="Pokot Project" data-de="Pokot-Projekt">Pokot-Projekt</a></li>
+                    <li><a th:href="@{/health-center}" href="/health-center" data-en="Health Center" data-de="Gesundheitszentrum">Gesundheitszentrum</a></li>
+                    <li><a th:href="@{/pokot-project}" href="/pokot-project" data-en="Pokot Project" data-de="Pokot-Projekt">Pokot-Projekt</a></li>
                     <li><a href="#" data-en="Springs of Hope" data-de="Springs of Hope">Springs of Hope</a></li>
                 </ul>
             </div>
+
             <div class="footer-contact-col">
                 <h4 data-en="Contact" data-de="Kontakt">Kontakt</h4>
                 <ul class="footer-contact-info">
@@ -51,7 +51,11 @@
 
                 <form class="modern-newsletter-form" action="#" method="POST">
                     <div class="input-group">
-                        <input type="email" placeholder="E-Mail-Adresse *" data-en-placeholder="Email address *" data-de-placeholder="E-Mail-Adresse *" required>
+                        <input type="email"
+                               placeholder="E-Mail-Adresse *"
+                               data-en-placeholder="Email address *"
+                               data-de-placeholder="E-Mail-Adresse *"
+                               required>
                         <button type="submit" class="btn-subscribe-modern">
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
@@ -66,6 +70,7 @@
             </div>
 
         </div>
+
         <div class="footer-bottom">
             <div class="footer-copy">
                 <span data-en="&copy; 2026 CMI - Christian Mission International. All rights reserved." data-de="&copy; 2026 CMI - Christliche Mission International. Alle Rechte vorbehalten.">

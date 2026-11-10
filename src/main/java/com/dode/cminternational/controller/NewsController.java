@@ -22,42 +22,63 @@ public class NewsController {
 
     @Autowired
     private FileUploadService fileUploadService;
+
     @GetMapping("/news")
     public String showNews(Model model) {
         model.addAttribute("newsList", newsRepo.findAll(Sort.by("id").descending()));
         return "news";
     }
+
     @GetMapping("/admin/news")
     public String adminNewsDashboard(Model model) {
         model.addAttribute("newsList", newsRepo.findAll(Sort.by("id").descending()));
         return "admin/admin-news-dashboard";
     }
+
     @GetMapping("/admin/news/new")
     public String showNewsCreateForm(Model model) {
         model.addAttribute("newsPost", new NewsPost());
         return "admin/admin-news-form";
     }
+
     @PostMapping("/admin/news/save")
     public String saveNewsPost(@ModelAttribute NewsPost newsPost,
-                               @RequestParam(value = "imageFile", required = false) MultipartFile imageFile) {
+                               @RequestParam(value = "imageFile", required = false) MultipartFile imageFile,
+                               @RequestParam(value = "pdfFile", required = false) MultipartFile pdfFile) {
+
+        // 1. Handle Cover Image
         if (imageFile != null && !imageFile.isEmpty()) {
             String imagePath = fileUploadService.saveImage(imageFile);
             if (imagePath != null) {
                 newsPost.setImageUrl(imagePath);
             }
         }
-        if (newsPost.getTitleDe() == null || newsPost.getTitleDe().isEmpty()) {
+
+        // 2. Handle PDF
+        if (pdfFile != null && !pdfFile.isEmpty()) {
+            String pdfPath = fileUploadService.saveFile(pdfFile);
+            if (pdfPath != null) {
+                newsPost.setPdfUrl(pdfPath);
+            }
+        }
+
+        // 3. Auto-Translate to German
+        if (newsPost.getTitleDe() == null || newsPost.getTitleDe().trim().isEmpty()) {
             newsPost.setTitleDe(translationService.translateEnToDe(newsPost.getTitleEn()));
         }
-        if (newsPost.getContentDe() == null || newsPost.getContentDe().isEmpty()) {
+        if (newsPost.getContentDe() == null || newsPost.getContentDe().trim().isEmpty()) {
             newsPost.setContentDe(translationService.translateEnToDe(newsPost.getContentEn()));
         }
-        if ((newsPost.getQuoteDe() == null || newsPost.getQuoteDe().isEmpty()) && newsPost.getQuoteEn() != null) {
+        if (newsPost.getQuoteEn() != null && !newsPost.getQuoteEn().trim().isEmpty() &&
+                (newsPost.getQuoteDe() == null || newsPost.getQuoteDe().trim().isEmpty())) {
             newsPost.setQuoteDe(translationService.translateEnToDe(newsPost.getQuoteEn()));
         }
+
+        // 4. Save to Database
         newsRepo.save(newsPost);
-        return "redirect:/news";
+        return "redirect:/admin/news";
     }
+
     @GetMapping("/admin/news/delete/{id}")
     public String deleteNewsPost(@PathVariable Long id) {
         newsRepo.deleteById(id);

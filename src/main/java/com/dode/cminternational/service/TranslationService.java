@@ -1,6 +1,9 @@
 package com.dode.cminternational.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -10,6 +13,8 @@ import java.nio.charset.StandardCharsets;
 
 @Service
 public class TranslationService {
+
+    private static final Logger log = LoggerFactory.getLogger(TranslationService.class);
 
     public String translateEnToDe(String text) {
         if (text == null || text.trim().isEmpty()) return text;
@@ -25,7 +30,7 @@ public class TranslationService {
             }
             chunk.append(sentence).append(" ");
         }
-        if (!chunk.isEmpty()) {
+        if (chunk.length() > 0) {
             fullTranslation.append(translateChunk(chunk.toString()));
         }
 
@@ -39,10 +44,11 @@ public class TranslationService {
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setConnectTimeout(5000); // 5 seconds timeout
+            conn.setConnectTimeout(5000);
             conn.setReadTimeout(5000);
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
             StringBuilder response = new StringBuilder();
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
@@ -60,14 +66,17 @@ public class TranslationService {
                 if (endIndex != -1) {
                     String translated = json.substring(startIndex, endIndex);
                     if (translated.contains("MYMEMORY WARNING")) {
+                        log.warn("MyMemory returned a warning for text of length {} — falling back to original.", text.length());
                         return text;
                     }
                     return translated;
                 }
             }
+            log.warn("Could not parse translation response — falling back to original.");
             return text;
         } catch (Exception e) {
-            return text; 
+            log.warn("Translation request failed — falling back to original. Reason: {}", e.getMessage());
+            return text;
         }
     }
 }

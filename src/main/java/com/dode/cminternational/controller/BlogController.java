@@ -37,7 +37,6 @@ public class BlogController {
         BlogPost post = blogRepo.findById(id).orElse(null);
         if (post == null) return "redirect:/blog";
 
-        // Increment Views
         post.setViews(post.getViews() + 1);
         blogRepo.save(post);
 
@@ -53,7 +52,7 @@ public class BlogController {
         if (post != null) {
             post.setLikes(post.getLikes() + 1);
             blogRepo.save(post);
-            return String.valueOf(post.getLikes()); // Returns just the number
+            return String.valueOf(post.getLikes());
         }
         return "0";
     }

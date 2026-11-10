@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" th:href="@{/cmi.css}" href="/cmi.css">
 </head>
 <body>
@@ -20,8 +19,6 @@
     <section class="blog-section">
 
         <div class="blog-grid">
-
-            <!-- Thymeleaf Loop -->
             <article class="blog-card" th:each="post : ${blogPage.content}">
                 <div class="blog-img-wrap">
                     <img th:src="${!post.images.isEmpty() ? post.images[0].imageUrl : '/images/placeholder.jpg'}"
@@ -36,13 +33,16 @@
 
                     <h2 th:attr="data-en=${post.titleEn}, data-de=${post.titleDe}" th:text="${post.titleEn}">Title</h2>
 
-                    <!-- FALLBACK LOGIC: If contentEn is empty, show the first image's description -->
+                    <!-- Null-safe excerpt: content → first image description → empty -->
                     <p th:attr="data-en=${post.contentEn}, data-de=${post.contentDe}"
-                       th:text="${!#strings.isEmpty(post.contentEn) ? #strings.abbreviate(post.contentEn, 120) : (post.images.size() > 0 ? #strings.abbreviate(post.images[0].descriptionEn, 120) : '')}">
+                       th:text="${!#strings.isEmpty(post.contentEn)
+                                 ? #strings.abbreviate(post.contentEn, 120)
+                                 : (!post.images.isEmpty() and !#strings.isEmpty(post.images[0].descriptionEn)
+                                     ? #strings.abbreviate(post.images[0].descriptionEn, 120)
+                                     : '')}">
                         Excerpt...
                     </p>
 
-                    <!-- Views and Likes -->
                     <div class="blog-footer-stats">
                         <span><i class="fa-regular fa-eye"></i> <span th:text="${post.views}">0</span> Views</span>
                         <span class="likes-count"><i class="fa-solid fa-heart"></i> <span th:text="${post.likes}">0</span></span>
@@ -51,7 +51,6 @@
                     <a th:href="@{/blog/post/{id}(id=${post.id})}" class="story-link" data-en="Read article →" data-de="Artikel lesen →">Artikel lesen →</a>
                 </div>
             </article>
-
         </div>
 
         <!-- PAGINATION -->
@@ -70,6 +69,6 @@
 </main>
 
 <div th:replace="~{footer :: footer}"></div>
-<script th:src="@{/js/cmi.js}" src="/js/cmi.js"></script>
+<script th:src="@{/cmi.js}" src="/cmi.js"></script>
 </body>
 </html>

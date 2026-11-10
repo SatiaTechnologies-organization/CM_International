@@ -6,6 +6,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -14,12 +16,20 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable()) // Disabled for forms and AJAX
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        // ALLOW ALL PUBLIC PAGES AND THEIR AJAX REQUESTS
-                        .requestMatchers("/css/**", "/js/**", "/images/**", "/uploads/**", "/", "/blog/**", "/news/**", "/login").permitAll()
+                        .requestMatchers(
+                                "/css/**", "/js/**", "/images/**", "/uploads/**",
+                                "/cmi.css", "/cmi.js",
+                                "/", "/blog/**", "/news/**", "/login"
+                        ).permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().permitAll()
                 )
@@ -33,10 +43,10 @@ public class SecurityConfig {
     }
 
     @Bean
-    public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails admin = User.withDefaultPasswordEncoder()
+    public InMemoryUserDetailsManager userDetailsService(PasswordEncoder encoder) {
+        UserDetails admin = User.builder()
                 .username("admin")
-                .password("admin123")
+                .password(encoder.encode("admin123"))
                 .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(admin);

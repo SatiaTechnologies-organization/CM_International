@@ -38,14 +38,15 @@
         </div>
 
         <div class="form-group">
-            <label>Upload Image:</label>
+            <label>Upload Cover Image:</label>
             <input type="file" name="imageFile" accept="image/*" style="padding: 10px; background: #f9f9f9; border: 1px dashed #ccc; width: 100%;">
             <input type="hidden" th:field="*{imageUrl}">
         </div>
 
         <div class="form-group">
-            <label>PDF Link (e.g., /pdf/new1.pdf):</label>
-            <input type="text" th:field="*{pdfUrl}" placeholder="/pdf/new1.pdf">
+            <label>Upload PDF Document (Optional):</label>
+            <input type="file" name="pdfFile" accept="application/pdf" style="padding: 10px; background: #f9f9f9; border: 1px dashed #ccc; width: 100%;">
+            <input type="hidden" th:field="*{pdfUrl}">
         </div>
 
         <div class="form-actions">
@@ -56,7 +57,7 @@
 </div>
 
 <div th:replace="~{footer :: footer}"></div>
-<script th:src="@{/cmi.js}" src="/cmi.js"></script>
+<script th:src="@{/cmi.js}"></script>
 
 </body>
 </html>

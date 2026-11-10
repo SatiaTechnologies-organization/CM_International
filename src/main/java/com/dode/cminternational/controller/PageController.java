@@ -39,4 +39,7 @@ public class PageController {
 
     @GetMapping("/login")
     public String login() { return "login"; }
+
+    @GetMapping("/support")
+    public String support() { return "support"; }
 }

@@ -16,6 +16,10 @@ public class FileUploadService {
     private final String UPLOAD_DIR = "uploads/";
 
     public String saveImage(MultipartFile file) {
+        return saveFile(file);
+    }
+
+    public String saveFile(MultipartFile file) {
         if (file == null || file.isEmpty()) {
             return null;
         }
@@ -25,7 +29,7 @@ public class FileUploadService {
                 directory.mkdirs();
             }
             String originalName = file.getOriginalFilename();
-            String uniqueName = UUID.randomUUID().toString() + "_" + (originalName != null ? originalName.replaceAll(" ", "_") : "image.jpg");
+            String uniqueName = UUID.randomUUID().toString() + "_" + (originalName != null ? originalName.replaceAll(" ", "_") : "file");
             Path path = Paths.get(UPLOAD_DIR + uniqueName);
             Files.copy(file.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
             return "/uploads/" + uniqueName;

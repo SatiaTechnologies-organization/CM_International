@@ -1,18 +1,61 @@
 spring:
   application:
     name: CM International
+
   datasource:
     url: jdbc:mysql://localhost:3306/cmi_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root123
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 3000      # ms — fail fast instead of 30s hang
+      idle-timeout: 600000           # 10 min
+      max-lifetime: 1800000          # 30 min
+
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
+    # ⚠️ Do NOT set database-platform — Hibernate 7 auto-detects MySQL.
+    # Setting it explicitly triggers: HHH90000025 warning in your log.
+    properties:
+      hibernate:
+        format_sql: false            # don't waste CPU formatting SQL
+        show_sql: false              # don't log every query to stdout
+
   thymeleaf:
-    cache: false
-    servlet:
-      multipart:
-        max-file-size: 10MB
-        max-request-size: 10MB
+    cache: true                      # ⚠️ PRODUCTION MUST be true.
+      # Set to false ONLY while actively editing templates.
+      # Every `false` request re-parses HTML — this is
+    # usually a 100–300 ms penalty per page load.
+
+  # ── FIXED: moved OUT of thymeleaf, to its correct level ──
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  # ── Static resource browser caching ──
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          max-age: 365d
+          cache-public: true
+          # After first visit, browser never re-downloads /cmi.css, /cmi.js,
+          # /images/*, /uploads/*. ⚠️ During dev, hard-refresh with Ctrl+Shift+R
+          # to see changes.
+
+server:
+  # ── Gzip compression ──
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,image/svg+xml
+    min-response-size: 1024
+
+  # ── Tomcat thread pool ──
+  tomcat:
+    threads:
+      max: 50
+      min-spare: 5

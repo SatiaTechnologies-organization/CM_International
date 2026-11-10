@@ -31,7 +31,6 @@
         <hr style="margin: 30px 0; border: 1px solid #eee;">
         <h3 style="margin-bottom: 15px; color: #174d2e;">Images & Descriptions</h3>
 
-        <!-- Container for dynamic images -->
         <div id="image-container">
             <div class="image-block" style="background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px;">
                 <div class="form-group">
@@ -55,7 +54,7 @@
 </div>
 
 <div th:replace="~{footer :: footer}"></div>
-<script th:src="@{/js/cmi.js}"></script>
+<script th:src="@{/cmi.js}"></script>
 <script>
     function addImageBlock() {
         const container = document.getElementById('image-container');
